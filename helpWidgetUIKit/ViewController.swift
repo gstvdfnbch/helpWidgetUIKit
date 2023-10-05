@@ -9,12 +9,12 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    @IBOutlet weak var titleMonthComponent: TitleSubdivisionComponent!
     @IBOutlet weak var startBalance: CustomView!
     @IBOutlet weak var actualBalance: CustomView!
     @IBOutlet weak var averageGoal: CustomView!
     @IBOutlet weak var spentSoFar: CustomView!
     
+    @IBOutlet weak var titleMonthComponent: TitleMonthComponent!
     override func viewDidLoad() {
         super.viewDidLoad()
         

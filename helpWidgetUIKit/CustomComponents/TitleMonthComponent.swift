@@ -7,8 +7,8 @@
 
 import UIKit
 
-class TitleSubdivisionComponent: UIView {
-    static let identifier = "TitleSubdivisionComponent"
+class TitleMonthComponent: UIView {
+    static let identifier = "TitleMonthComponent"
 
     @IBOutlet weak var titleMonth: UILabel!
     @IBOutlet weak var titlePeriod: UILabel!
@@ -25,7 +25,7 @@ class TitleSubdivisionComponent: UIView {
     
     func initSubviews() {
 
-        let nib = UINib(nibName: TitleSubdivisionComponent.identifier, bundle: nil)
+        let nib = UINib(nibName: TitleMonthComponent.identifier, bundle: nil)
 
         guard let view = nib.instantiate(withOwner: self, options: nil).first as?
                             UIView else {fatalError("Unable to convert nib")}

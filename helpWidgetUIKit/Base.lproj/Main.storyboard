@@ -20,7 +20,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="28e-p7-HK8">
                                 <rect key="frame" x="16" y="75" width="361" height="343"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RL2-T3-dhu" customClass="TitleSubdivisionComponent" customModule="helpWidgetUIKit" customModuleProvider="target">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RL2-T3-dhu" customClass="TitleMonthComponent" customModule="helpWidgetUIKit" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="361" height="101.33333333333333"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     </view>
@@ -67,7 +67,7 @@
                         <outlet property="averageGoal" destination="5dH-mU-zXd" id="MuV-fn-l7O"/>
                         <outlet property="spentSoFar" destination="Ukh-SC-JXm" id="5vF-ed-bQM"/>
                         <outlet property="startBalance" destination="bd9-iS-v4w" id="7fc-iI-Mg5"/>
-                        <outlet property="titleMonthComponent" destination="RL2-T3-dhu" id="SqV-my-Jkw"/>
+                        <outlet property="titleMonthComponent" destination="RL2-T3-dhu" id="0iO-gu-INF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
