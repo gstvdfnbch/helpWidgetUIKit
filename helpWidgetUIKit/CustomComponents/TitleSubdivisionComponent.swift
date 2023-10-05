@@ -11,6 +11,7 @@ class TitleSubdivisionComponent: UIView {
     static let identifier = "TitleSubdivisionComponent"
 
     @IBOutlet weak var titleMonth: UILabel!
+    @IBOutlet weak var titlePeriod: UILabel!
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -30,13 +31,13 @@ class TitleSubdivisionComponent: UIView {
                             UIView else {fatalError("Unable to convert nib")}
 
         view.frame = self.bounds
-
-//        view.layer.shadowOpacity = 0.50
-//        view.layer.shadowRadius = shadowRadiusProject
-//        view.layer.shadowColor = UIColor.black.cgColor
-//        view.layer.shadowOffset = CGSize.zero
         
         self.addSubview(view)
+    }
+    
+    func sendData(titleMnt: String, subtitleMnt: String) {
+        titleMonth.text = titleMnt
+        titlePeriod.text = subtitleMnt
     }
 
 }

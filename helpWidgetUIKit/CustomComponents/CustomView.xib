@@ -13,6 +13,7 @@
                 <outlet property="backgroundRounded" destination="G3O-9A-ZKp" id="FFE-MW-LY3"/>
                 <outlet property="icon" destination="jzf-ek-YOx" id="aI9-W9-Xnj"/>
                 <outlet property="mainTitle" destination="HY9-nw-IT1" id="nnv-Pk-CoK"/>
+                <outlet property="subtitleNote" destination="bsG-p6-10r" id="588-3F-tUJ"/>
                 <outlet property="value" destination="TAz-xx-3nT" id="L1b-OR-wU2"/>
             </connections>
         </placeholder>
@@ -24,34 +25,40 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G3O-9A-ZKp">
                     <rect key="frame" x="0.0" y="0.0" width="285" height="159"/>
                     <subviews>
-                        <stackView opaque="NO" contentMode="scaleAspectFit" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="Z2I-b9-7qq">
+                        <stackView opaque="NO" contentMode="scaleAspectFit" axis="vertical" distribution="fillProportionally" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Z2I-b9-7qq">
                             <rect key="frame" x="16" y="16" width="253" height="127"/>
                             <subviews>
-                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="XNI-Il-R1L">
-                                    <rect key="frame" x="0.0" y="0.0" width="253" height="82.666666666666671"/>
+                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="XNI-Il-R1L">
+                                    <rect key="frame" x="0.0" y="0.0" width="253" height="58"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="Start Balance" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HY9-nw-IT1">
-                                            <rect key="frame" x="0.0" y="0.0" width="214.66666666666666" height="82.666666666666671"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="210" height="58"/>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
                                             <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" verticalHuggingPriority="251" image="start" translatesAutoresizingMaskIntoConstraints="NO" id="jzf-ek-YOx">
-                                            <rect key="frame" x="214.66666666666666" y="0.0" width="38.333333333333343" height="82.666666666666671"/>
+                                            <rect key="frame" x="218" y="0.0" width="35" height="58"/>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
-                                                <constraint firstAttribute="width" constant="30" id="fPf-fa-SI0"/>
+                                                <constraint firstAttribute="width" constant="35" id="fPf-fa-SI0"/>
                                             </constraints>
                                         </imageView>
                                     </subviews>
                                 </stackView>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="R$ 700.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TAz-xx-3nT">
-                                    <rect key="frame" x="0.0" y="82.666666666666671" width="253" height="44.333333333333329"/>
+                                    <rect key="frame" x="0.0" y="66" width="253" height="31"/>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
                                     <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bsG-p6-10r" userLabel="SubtitleNote">
+                                    <rect key="frame" x="0.0" y="105" width="253" height="22"/>
+                                    <fontDescription key="fontDescription" style="UICTFontTextStyleCaption2"/>
+                                    <color key="textColor" systemColor="secondaryLabelColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                             </subviews>
@@ -79,6 +86,9 @@
     </objects>
     <resources>
         <image name="start" width="45" height="45"/>
+        <systemColor name="secondaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

@@ -16,6 +16,7 @@ class CustomView: UIView {
     @IBOutlet weak var icon: UIImageView!
     @IBOutlet weak var value: UILabel!
     @IBOutlet weak var backgroundRounded: UIView!
+    @IBOutlet weak var subtitleNote: UILabel!
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -44,12 +45,22 @@ class CustomView: UIView {
         self.addSubview(view)
     }
         
-    func configureImageAndText(title : String, iconImage : UIImage, valueDouble: Double){
+    func configureImageAndText(title : String, iconImage : String, valueDouble: Double, subtitleString: String? = nil){
         mainTitle.text = title
         mainTitle.textColor = UIColor(named: "fontColor")
         mainTitle.font = UIFont.boldSystemFont(ofSize: mainTitle.font.pointSize)
         
-        icon.image = iconImage
+        if let iconPack = UIImage(named: iconImage) {
+            icon.image = iconPack
+        } else {
+            icon.image = .remove
+        }
+        
+        if subtitleString != nil {
+            subtitleNote.text = subtitleString
+        } else {
+            subtitleNote.isHidden = true
+        }
         
         value.text = "R$ " + String(valueDouble)
         value.textColor = UIColor(named: "fontColor")
