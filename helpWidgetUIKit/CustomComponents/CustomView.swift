@@ -25,14 +25,13 @@ class CustomView: UIView {
     }
 
     func initSubviews() {
-
         let nib = UINib(nibName: CustomView.identifier, bundle: nil)
 
         guard let view = nib.instantiate(withOwner: self, options: nil).first as?
                             UIView else {fatalError("Unable to convert nib")}
 
         view.frame = self.bounds
-        //view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
 
         self.addSubview(view)
 
@@ -45,7 +44,11 @@ class CustomView: UIView {
         
         self.backgroundColor = UIColor.white
         self.layer.cornerRadius = 16
+        
         self.layer.shadowRadius = 5
+        self.layer.shadowOpacity = 1.0
+        self.layer.shadowColor = UIColor.black.cgColor
+        self.layer.shadowOffset = .zero
 
         mainTitle.textColor = UIColor(named: "fontColor")
         value.textColor = UIColor(named: "fontColor")
