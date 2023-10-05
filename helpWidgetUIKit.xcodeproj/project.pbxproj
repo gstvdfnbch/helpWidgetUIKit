@@ -15,6 +15,9 @@
 		7B3E65DE2ACDA190000CBBCA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B3E65DC2ACDA190000CBBCA /* LaunchScreen.storyboard */; };
 		7B3E65E72ACDA222000CBBCA /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3E65E62ACDA222000CBBCA /* CustomView.swift */; };
 		7B3E65E92ACDA257000CBBCA /* CustomView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B3E65E82ACDA257000CBBCA /* CustomView.xib */; };
+		7BEFF39C2ACE5CA4005D7FF0 /* ConstantsProject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BEFF39B2ACE5CA4005D7FF0 /* ConstantsProject.swift */; };
+		7BEFF39E2ACE5D7C005D7FF0 /* TitleSubdivisionComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BEFF39D2ACE5D7C005D7FF0 /* TitleSubdivisionComponent.swift */; };
+		7BEFF3A02ACE5D8D005D7FF0 /* TitleSubdivisionComponent.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7BEFF39F2ACE5D8D005D7FF0 /* TitleSubdivisionComponent.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +31,9 @@
 		7B3E65DF2ACDA190000CBBCA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7B3E65E62ACDA222000CBBCA /* CustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
 		7B3E65E82ACDA257000CBBCA /* CustomView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomView.xib; sourceTree = "<group>"; };
+		7BEFF39B2ACE5CA4005D7FF0 /* ConstantsProject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstantsProject.swift; sourceTree = "<group>"; };
+		7BEFF39D2ACE5D7C005D7FF0 /* TitleSubdivisionComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleSubdivisionComponent.swift; sourceTree = "<group>"; };
+		7BEFF39F2ACE5D8D005D7FF0 /* TitleSubdivisionComponent.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TitleSubdivisionComponent.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,13 +66,14 @@
 		7B3E65D02ACDA18F000CBBCA /* helpWidgetUIKit */ = {
 			isa = PBXGroup;
 			children = (
-				7B3E65E52ACDA1DF000CBBCA /* CustomComponents */,
 				7B3E65D12ACDA18F000CBBCA /* AppDelegate.swift */,
 				7B3E65D32ACDA18F000CBBCA /* SceneDelegate.swift */,
+				7BEFF39B2ACE5CA4005D7FF0 /* ConstantsProject.swift */,
+				7B3E65E52ACDA1DF000CBBCA /* CustomComponents */,
 				7B3E65D52ACDA18F000CBBCA /* ViewController.swift */,
 				7B3E65D72ACDA18F000CBBCA /* Main.storyboard */,
-				7B3E65DA2ACDA190000CBBCA /* Assets.xcassets */,
 				7B3E65DC2ACDA190000CBBCA /* LaunchScreen.storyboard */,
+				7B3E65DA2ACDA190000CBBCA /* Assets.xcassets */,
 				7B3E65DF2ACDA190000CBBCA /* Info.plist */,
 			);
 			path = helpWidgetUIKit;
@@ -77,6 +84,8 @@
 			children = (
 				7B3E65E62ACDA222000CBBCA /* CustomView.swift */,
 				7B3E65E82ACDA257000CBBCA /* CustomView.xib */,
+				7BEFF39D2ACE5D7C005D7FF0 /* TitleSubdivisionComponent.swift */,
+				7BEFF39F2ACE5D8D005D7FF0 /* TitleSubdivisionComponent.xib */,
 			);
 			path = CustomComponents;
 			sourceTree = "<group>";
@@ -141,6 +150,7 @@
 			files = (
 				7B3E65DE2ACDA190000CBBCA /* LaunchScreen.storyboard in Resources */,
 				7B3E65E92ACDA257000CBBCA /* CustomView.xib in Resources */,
+				7BEFF3A02ACE5D8D005D7FF0 /* TitleSubdivisionComponent.xib in Resources */,
 				7B3E65DB2ACDA190000CBBCA /* Assets.xcassets in Resources */,
 				7B3E65D92ACDA18F000CBBCA /* Main.storyboard in Resources */,
 			);
@@ -155,6 +165,8 @@
 			files = (
 				7B3E65D62ACDA18F000CBBCA /* ViewController.swift in Sources */,
 				7B3E65E72ACDA222000CBBCA /* CustomView.swift in Sources */,
+				7BEFF39E2ACE5D7C005D7FF0 /* TitleSubdivisionComponent.swift in Sources */,
+				7BEFF39C2ACE5CA4005D7FF0 /* ConstantsProject.swift in Sources */,
 				7B3E65D22ACDA18F000CBBCA /* AppDelegate.swift in Sources */,
 				7B3E65D42ACDA18F000CBBCA /* SceneDelegate.swift in Sources */,
 			);

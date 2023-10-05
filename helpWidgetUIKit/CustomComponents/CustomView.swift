@@ -9,10 +9,13 @@ import UIKit
 
 class CustomView: UIView {
     static let identifier = "CustomView"
-
+    
+    let containerView = UIView()
+    
     @IBOutlet weak var mainTitle: UILabel!
     @IBOutlet weak var icon: UIImageView!
     @IBOutlet weak var value: UILabel!
+    @IBOutlet weak var backgroundRounded: UIView!
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -32,23 +35,28 @@ class CustomView: UIView {
                             UIView else {fatalError("Unable to convert nib")}
 
         view.frame = self.bounds
-        //view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
 
+        view.layer.shadowOpacity = 0.50
+        view.layer.shadowRadius = shadowRadiusProject
+        view.layer.shadowColor = UIColor.black.cgColor
+        view.layer.shadowOffset = CGSize.zero
+        
         self.addSubview(view)
-
     }
         
     func configureImageAndText(title : String, iconImage : UIImage, valueDouble: Double){
         mainTitle.text = title
-        icon.image = iconImage
-        value.text = "R$ " + String(valueDouble)
-        
-        self.backgroundColor = UIColor.white
-        self.layer.cornerRadius = 16
-        self.layer.shadowRadius = 5
-
         mainTitle.textColor = UIColor(named: "fontColor")
-        value.textColor = UIColor(named: "fontColor")
         mainTitle.font = UIFont.boldSystemFont(ofSize: mainTitle.font.pointSize)
+        
+        icon.image = iconImage
+        
+        value.text = "R$ " + String(valueDouble)
+        value.textColor = UIColor(named: "fontColor")
+
+        backgroundRounded.clipsToBounds = true
+        backgroundRounded.layer.cornerRadius = cornerRadiusProject
+
     }
 }
+

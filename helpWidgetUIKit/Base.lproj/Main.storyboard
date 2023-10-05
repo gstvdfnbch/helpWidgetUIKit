@@ -17,31 +17,55 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bd9-iS-v4w" customClass="CustomView" customModule="helpWidgetUIKit" customModuleProvider="target">
-                                <rect key="frame" x="16" y="75" width="180" height="170"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                            </view>
-                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vVS-0H-H1q" userLabel="Actual Balance" customClass="CustomView" customModule="helpWidgetUIKit" customModuleProvider="target">
-                                <rect key="frame" x="212" y="75" width="165" height="170"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="28e-p7-HK8">
+                                <rect key="frame" x="16" y="75" width="361" height="273"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RL2-T3-dhu" customClass="TitleSubdivisionComponent" customModule="helpWidgetUIKit" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="361" height="80.333333333333329"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    </view>
+                                    <stackView opaque="NO" contentMode="scaleAspectFit" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="P0a-tA-D89">
+                                        <rect key="frame" x="0.0" y="96.333333333333343" width="361" height="80.333333333333343"/>
+                                        <subviews>
+                                            <view contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="bd9-iS-v4w" customClass="CustomView" customModule="helpWidgetUIKit" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="172.66666666666666" height="80.333333333333329"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                            </view>
+                                            <view contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="vVS-0H-H1q" userLabel="Actual Balance" customClass="CustomView" customModule="helpWidgetUIKit" customModuleProvider="target">
+                                                <rect key="frame" x="188.66666666666663" y="0.0" width="172.33333333333337" height="80.333333333333329"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                            </view>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="VAa-cS-Bsc">
+                                        <rect key="frame" x="0.0" y="192.66666666666669" width="361" height="80.333333333333314"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5dH-mU-zXd" userLabel="Average Goal" customClass="CustomView" customModule="helpWidgetUIKit" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="172.66666666666666" height="80.333333333333329"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ukh-SC-JXm" userLabel="Spent So Far" customClass="CustomView" customModule="helpWidgetUIKit" customModuleProvider="target">
+                                                <rect key="frame" x="188.66666666666663" y="0.0" width="172.33333333333337" height="80.333333333333329"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                            </view>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="vVS-0H-H1q" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="9Qc-Gd-p7V"/>
-                            <constraint firstItem="vVS-0H-H1q" firstAttribute="leading" secondItem="bd9-iS-v4w" secondAttribute="trailing" constant="16" id="E7o-7Z-44d"/>
-                            <constraint firstItem="bd9-iS-v4w" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="Iqf-es-5kq"/>
-                            <constraint firstItem="vVS-0H-H1q" firstAttribute="leading" secondItem="bd9-iS-v4w" secondAttribute="trailing" constant="16" id="VTp-d2-bPn"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="bd9-iS-v4w" secondAttribute="bottom" constant="573" id="ZDR-Bf-nyr"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="vVS-0H-H1q" secondAttribute="trailing" constant="16" id="ftU-FM-e0z"/>
-                            <constraint firstItem="bd9-iS-v4w" firstAttribute="bottom" secondItem="vVS-0H-H1q" secondAttribute="bottom" id="iMn-cw-Tqa"/>
-                            <constraint firstAttribute="trailing" secondItem="bd9-iS-v4w" secondAttribute="trailing" constant="197" id="tJW-kJ-KtL"/>
-                            <constraint firstItem="bd9-iS-v4w" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="xir-53-diw"/>
+                            <constraint firstItem="28e-p7-HK8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="2KE-96-3bU"/>
+                            <constraint firstItem="28e-p7-HK8" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="5LM-o5-V6Z"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="28e-p7-HK8" secondAttribute="trailing" constant="16" id="WG1-Iq-due"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="28e-p7-HK8" secondAttribute="bottom" constant="470" id="WXi-z7-Gcx"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="actualBalance" destination="vVS-0H-H1q" id="oxe-8P-e51"/>
+                        <outlet property="averageGoal" destination="5dH-mU-zXd" id="MuV-fn-l7O"/>
+                        <outlet property="spentSoFar" destination="Ukh-SC-JXm" id="5vF-ed-bQM"/>
                         <outlet property="startBalance" destination="bd9-iS-v4w" id="7fc-iI-Mg5"/>
                     </connections>
                 </viewController>
