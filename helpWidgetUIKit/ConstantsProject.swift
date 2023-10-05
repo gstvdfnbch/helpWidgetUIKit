@@ -6,6 +6,14 @@
 //
 
 import Foundation
+import UIKit
 
 let cornerRadiusProject: CGFloat = 16.0
 let shadowRadiusProject: CGFloat = 3.0
+
+
+enum ModeIcon {
+    case basic
+    case percent
+    case percentInv
+}

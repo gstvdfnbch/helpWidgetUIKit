@@ -17,6 +17,7 @@ class CustomView: UIView {
     @IBOutlet weak var value: UILabel!
     @IBOutlet weak var backgroundRounded: UIView!
     @IBOutlet weak var subtitleNote: UILabel!
+    @IBOutlet weak var unitLabel: UILabel!
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -42,24 +43,69 @@ class CustomView: UIView {
         view.layer.shadowColor = UIColor.black.cgColor
         view.layer.shadowOffset = CGSize.zero
         
+        
         self.addSubview(view)
     }
         
-    func configureImageAndText(title : String, iconImage : String, valueDouble: Double, subtitleString: String? = nil){
+    func configureImageAndText(title : String, 
+                               iconImage : String? = nil,
+                               modeIcon: ModeIcon? = nil,
+                               valueDouble: Double,
+                               percentValue: Double? = nil,
+                               unit: String? = nil,
+                               subtitleString: String? = nil){
+        
         mainTitle.text = title
         mainTitle.textColor = UIColor(named: "fontColor")
         mainTitle.font = UIFont.boldSystemFont(ofSize: mainTitle.font.pointSize)
         
-        if let iconPack = UIImage(named: iconImage) {
-            icon.image = iconPack
+        
+        if modeIcon != nil && modeIcon != ModeIcon.basic {
+            if let value = percentValue {
+                
+                switch modeIcon {
+                case .percent:
+                    if value > 0 {
+                        icon.image = UIImage(systemName: "arrow.up")
+                        icon.tintColor = UIColor.green
+                    } else {
+                        icon.image = UIImage(systemName: "arrow.down")
+                        icon.tintColor = UIColor.red
+                    }
+                    case .percentInv:
+                    if value > 0 {
+                        icon.image = UIImage(systemName: "arrow.up")
+                        icon.tintColor = UIColor.red
+                    } else {
+                        icon.image = UIImage(systemName: "arrow.down")
+                        icon.tintColor = UIColor.green
+                    }
+                    case .basic:
+                        break
+                    case .none:
+                        break
+                    }
+                }
         } else {
-            icon.image = .remove
+            //if let iconPack = UIImage(named: iconImage) {
+            if let iconPack = iconImage {
+                icon.image = UIImage(named: iconPack)
+                icon.tintColor = UIColor.purple
+            } else {
+                icon.image = .remove
+            }
         }
         
         if subtitleString != nil {
             subtitleNote.text = subtitleString
         } else {
             subtitleNote.isHidden = true
+        }
+        
+        if unit != nil {
+            unitLabel.text = unit
+        } else {
+            unitLabel.isHidden = true
         }
         
         value.text = "R$ " + String(valueDouble)
