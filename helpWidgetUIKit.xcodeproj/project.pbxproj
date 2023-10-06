@@ -15,6 +15,8 @@
 		7B3E65DE2ACDA190000CBBCA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B3E65DC2ACDA190000CBBCA /* LaunchScreen.storyboard */; };
 		7B3E65E72ACDA222000CBBCA /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3E65E62ACDA222000CBBCA /* CustomView.swift */; };
 		7B3E65E92ACDA257000CBBCA /* CustomView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B3E65E82ACDA257000CBBCA /* CustomView.xib */; };
+		7BAA70F82AD0AFCE00FD343A /* TitleSectionComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BAA70F72AD0AFCE00FD343A /* TitleSectionComponent.swift */; };
+		7BAA70FA2AD0B01600FD343A /* TitleSectionComponent.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7BAA70F92AD0B01600FD343A /* TitleSectionComponent.xib */; };
 		7BEFF39C2ACE5CA4005D7FF0 /* ConstantsProject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BEFF39B2ACE5CA4005D7FF0 /* ConstantsProject.swift */; };
 		7BEFF39E2ACE5D7C005D7FF0 /* TitleMonthComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BEFF39D2ACE5D7C005D7FF0 /* TitleMonthComponent.swift */; };
 		7BEFF3A02ACE5D8D005D7FF0 /* TitleMonthComponent.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7BEFF39F2ACE5D8D005D7FF0 /* TitleMonthComponent.xib */; };
@@ -35,6 +37,8 @@
 		7B3E65DF2ACDA190000CBBCA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7B3E65E62ACDA222000CBBCA /* CustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
 		7B3E65E82ACDA257000CBBCA /* CustomView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomView.xib; sourceTree = "<group>"; };
+		7BAA70F72AD0AFCE00FD343A /* TitleSectionComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleSectionComponent.swift; sourceTree = "<group>"; };
+		7BAA70F92AD0B01600FD343A /* TitleSectionComponent.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TitleSectionComponent.xib; sourceTree = "<group>"; };
 		7BEFF39B2ACE5CA4005D7FF0 /* ConstantsProject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstantsProject.swift; sourceTree = "<group>"; };
 		7BEFF39D2ACE5D7C005D7FF0 /* TitleMonthComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleMonthComponent.swift; sourceTree = "<group>"; };
 		7BEFF39F2ACE5D8D005D7FF0 /* TitleMonthComponent.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TitleMonthComponent.xib; sourceTree = "<group>"; };
@@ -92,10 +96,12 @@
 		7B3E65E52ACDA1DF000CBBCA /* CustomComponents */ = {
 			isa = PBXGroup;
 			children = (
-				7B3E65E62ACDA222000CBBCA /* CustomView.swift */,
+				7BAA70F92AD0B01600FD343A /* TitleSectionComponent.xib */,
+				7BAA70F72AD0AFCE00FD343A /* TitleSectionComponent.swift */,
 				7B3E65E82ACDA257000CBBCA /* CustomView.xib */,
-				7BEFF39D2ACE5D7C005D7FF0 /* TitleMonthComponent.swift */,
+				7B3E65E62ACDA222000CBBCA /* CustomView.swift */,
 				7BEFF39F2ACE5D8D005D7FF0 /* TitleMonthComponent.xib */,
+				7BEFF39D2ACE5D7C005D7FF0 /* TitleMonthComponent.swift */,
 				7BFA491B2AD07E9E0091C78C /* CustomTableView.swift */,
 			);
 			path = CustomComponents;
@@ -187,6 +193,7 @@
 				7B3E65DE2ACDA190000CBBCA /* LaunchScreen.storyboard in Resources */,
 				7B3E65E92ACDA257000CBBCA /* CustomView.xib in Resources */,
 				7BF933012AD03E1400641E1A /* MainBoard.storyboard in Resources */,
+				7BAA70FA2AD0B01600FD343A /* TitleSectionComponent.xib in Resources */,
 				7BEFF3A02ACE5D8D005D7FF0 /* TitleMonthComponent.xib in Resources */,
 				7B3E65DB2ACDA190000CBBCA /* Assets.xcassets in Resources */,
 				7B3E65D92ACDA18F000CBBCA /* Main.storyboard in Resources */,
@@ -202,6 +209,7 @@
 			files = (
 				7B3E65D62ACDA18F000CBBCA /* ViewController.swift in Sources */,
 				7B3E65E72ACDA222000CBBCA /* CustomView.swift in Sources */,
+				7BAA70F82AD0AFCE00FD343A /* TitleSectionComponent.swift in Sources */,
 				7BEFF39E2ACE5D7C005D7FF0 /* TitleMonthComponent.swift in Sources */,
 				7BEFF39C2ACE5CA4005D7FF0 /* ConstantsProject.swift in Sources */,
 				7BF932FD2AD03DD600641E1A /* MainBoardViewController.swift in Sources */,

@@ -38,7 +38,7 @@ class CustomView: UIView {
 
         view.frame = self.bounds
 
-        view.layer.shadowOpacity = 0.50
+        view.layer.shadowOpacity = 0.3
         view.layer.shadowRadius = shadowRadiusProject
         view.layer.shadowColor = UIColor.black.cgColor
         view.layer.shadowOffset = CGSize.zero
@@ -68,10 +68,10 @@ class CustomView: UIView {
                 case .percentInv:
                     if value > 0 {
                         icon.image = UIImage(systemName: "arrow.up")
-                        icon.tintColor = UIColor.red
+                        icon.tintColor = UIColor.systemRed
                     } else {
                         icon.image = UIImage(systemName: "arrow.down")
-                        icon.tintColor = UIColor.green
+                        icon.tintColor = UIColor.systemGreen
                     }
                 case .basic:
                     break
@@ -82,7 +82,6 @@ class CustomView: UIView {
         } else {
             if let iconPack = infos.iconImage {
                 icon.image = UIImage(named: iconPack)
-                icon.tintColor = UIColor.purple
             } else {
                 icon.image = .remove
             }

@@ -25,11 +25,30 @@ class TitleMonthComponentTableViewCell: UITableViewCell {
 }
 
 class DoubleColumn: UITableViewCell {
-    static let identifier = "DoubleColumn"
+    static let identifier = CustomView.identifier
     
-    @IBOutlet weak var actualBalance: CustomView!
-    @IBOutlet weak var startBalance: CustomView!
+    @IBOutlet weak var leftComponent: CustomView!
     
+    @IBOutlet weak var rightComponent: CustomView!
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        // Initialization code
+    }
+
+    override func setSelected(_ selected: Bool, animated: Bool) {
+        super.setSelected(selected, animated: animated)
+
+        // Configure the view for the selected state
+    }
+
+}
+
+class TitleSectionCell: UITableViewCell {
+    static let identifier = TitleSectionComponent.identifier
+    
+    
+    @IBOutlet weak var titleSection: TitleSectionComponent!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

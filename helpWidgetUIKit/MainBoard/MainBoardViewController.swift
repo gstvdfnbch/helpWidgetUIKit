@@ -36,21 +36,19 @@ extension MainBoardViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    
-//        let cell = tableView.dequeueReusableCell(withIdentifier: TitleMonthComponent.identifier, for: indexPath) as! TitleMonthComponentTableViewCell
         
-//        cell.titleMonthComponentView.sendData(titleMnt: "asdas", subtitleMnt: "asdasd")
-        
-        
-        let cell = tableView.dequeueReusableCell(withIdentifier: DoubleColumn.identifier, for: indexPath) as! DoubleColumn
-        
-//        cell.startBalance.configureImageAndText(infos: dashBoardList[DashboardItem.startBalance.rawValue])
-//
-//        cell.actualBalance.configureImageAndText(infos: dashBoardList[DashboardItem.actualBalance.rawValue])
-  
-        cell.startBalance.configureImageAndText(infos: dashBoardList[indexPath.row * 2])
+        let cell = tableView.dequeueReusableCell(withIdentifier: TitleSectionComponent.identifier, for: indexPath) as! TitleSectionCell
 
-        cell.actualBalance.configureImageAndText(infos: dashBoardList[indexPath.row * 2 + 1])
+       
+        cell.titleSection.configureImageAndText(infos: InfosDashBoard(title: "gustavo", valueDouble: 90))       
+        
+        //        let cell = tableView.dequeueReusableCell(withIdentifier: DoubleColumn.identifier, for: indexPath) as! DoubleColumn
+  
+//        cell.selectionStyle = .none
+//        
+//        cell.leftComponent.configureImageAndText(infos: dashBoardList[indexPath.row * 2])
+//
+//        cell.rightComponent.configureImageAndText(infos: dashBoardList[indexPath.row * 2 + 1])
         
         print(indexPath)
         return cell

@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Ws0-Sn-yov">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Main Board View Controller-->
+        <!--MoneyControll-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
                 <viewController id="Y6W-OH-hqX" customClass="MainBoardViewController" customModule="helpWidgetUIKit" customModuleProvider="target" sceneMemberID="viewController">
@@ -18,9 +19,9 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="UcE-QL-20V">
-                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <color key="sectionIndexBackgroundColor" red="1" green="0.32602844240000001" blue="0.25244206479999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <rect key="frame" x="0.0" y="111" width="393" height="707"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="TitleMonthComponent" id="uN4-MJ-b5I" customClass="TitleMonthComponentTableViewCell" customModule="helpWidgetUIKit" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="50" width="393" height="16"/>
@@ -31,9 +32,10 @@
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s9c-zg-jVS" customClass="TitleMonthComponent" customModule="helpWidgetUIKit" customModuleProvider="target">
                                                     <rect key="frame" x="16" y="8" width="361" height="0.0"/>
-                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </view>
                                             </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
                                                 <constraint firstItem="s9c-zg-jVS" firstAttribute="leading" secondItem="1kB-hr-lhd" secondAttribute="leading" constant="16" id="BLj-S7-DGO"/>
                                                 <constraint firstItem="s9c-zg-jVS" firstAttribute="top" secondItem="1kB-hr-lhd" secondAttribute="top" constant="8" id="IDd-mK-Aq6"/>
@@ -41,6 +43,7 @@
                                                 <constraint firstAttribute="trailing" secondItem="s9c-zg-jVS" secondAttribute="trailing" constant="16" id="fKl-RK-gPr"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <connections>
                                             <outlet property="titleMonthComponentView" destination="s9c-zg-jVS" id="Pux-lB-HNw"/>
                                         </connections>
@@ -55,18 +58,20 @@
                                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="92s-4C-Uuw">
                                                     <rect key="frame" x="16" y="8" width="361" height="173.33333333333334"/>
                                                     <subviews>
-                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qtk-On-vu1" userLabel="Start" customClass="CustomView" customModule="helpWidgetUIKit" customModuleProvider="target">
+                                                        <view contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="Qtk-On-vu1" userLabel="Left" customClass="CustomView" customModule="helpWidgetUIKit" customModuleProvider="target">
                                                             <rect key="frame" x="0.0" y="22.666666666666671" width="172.33333333333334" height="128"/>
-                                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </view>
-                                                        <view contentMode="scaleToFill" id="72L-Br-Sku" userLabel="Actual" customClass="CustomView" customModule="helpWidgetUIKit" customModuleProvider="target">
+                                                        <view contentMode="scaleAspectFit" id="72L-Br-Sku" userLabel="Right" customClass="CustomView" customModule="helpWidgetUIKit" customModuleProvider="target">
                                                             <rect key="frame" x="188.66666666666663" y="86.666666666666671" width="172.33333333333337" height="0.0"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </view>
                                                     </subviews>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </stackView>
                                             </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
                                                 <constraint firstAttribute="trailing" secondItem="92s-4C-Uuw" secondAttribute="trailing" constant="16" id="1IE-ta-MHF"/>
                                                 <constraint firstAttribute="bottom" secondItem="92s-4C-Uuw" secondAttribute="bottom" constant="8" id="3vh-CJ-TcV"/>
@@ -74,33 +79,102 @@
                                                 <constraint firstItem="92s-4C-Uuw" firstAttribute="top" secondItem="cX1-Hk-l2r" secondAttribute="top" constant="8" id="ena-em-Ypi"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <connections>
-                                            <outlet property="actualBalance" destination="72L-Br-Sku" id="e1h-Vx-AZi"/>
-                                            <outlet property="startBalance" destination="Qtk-On-vu1" id="47d-Eu-nGs"/>
+                                            <outlet property="leftComponent" destination="Qtk-On-vu1" id="jRy-dR-cTO"/>
+                                            <outlet property="rightComponent" destination="72L-Br-Sku" id="3fJ-t4-6nU"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="TitleSectionComponent" id="xN9-Je-yen" customClass="TitleSectionCell" customModule="helpWidgetUIKit" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="255.33332824707031" width="393" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="xN9-Je-yen" id="xBh-b7-4Gp" userLabel="TitleView">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KfA-FU-Y15" customClass="TitleSectionComponent" customModule="helpWidgetUIKit" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="0.0" width="393" height="44"/>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                </view>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstItem="KfA-FU-Y15" firstAttribute="leading" secondItem="xBh-b7-4Gp" secondAttribute="leading" id="3Mc-k9-cMe"/>
+                                                <constraint firstAttribute="bottom" secondItem="KfA-FU-Y15" secondAttribute="bottom" id="Aoa-X2-eRX"/>
+                                                <constraint firstItem="KfA-FU-Y15" firstAttribute="top" secondItem="xBh-b7-4Gp" secondAttribute="top" id="Noa-Vj-2Sg"/>
+                                                <constraint firstAttribute="trailing" secondItem="KfA-FU-Y15" secondAttribute="trailing" id="mhf-RZ-Ek6"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <outlet property="titleSection" destination="KfA-FU-Y15" id="zei-qL-yXg"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" name="backgroundApp"/>
                         <constraints>
-                            <constraint firstItem="UcE-QL-20V" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="5Bp-FI-si6"/>
+                            <constraint firstItem="UcE-QL-20V" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="8" id="5Bp-FI-si6"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="UcE-QL-20V" secondAttribute="trailing" id="AlK-48-nbC"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="UcE-QL-20V" secondAttribute="bottom" id="Fp8-i1-kEa"/>
                             <constraint firstItem="UcE-QL-20V" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="d08-Di-G3Q"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="MoneyControll" id="gTf-W0-Egt"/>
                     <connections>
                         <outlet property="tableView" destination="UcE-QL-20V" id="48X-R4-HUo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-94" y="11"/>
+            <point key="canvasLocation" x="831.29770992366412" y="10.563380281690142"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="aub-Ie-8PR">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Ws0-Sn-yov" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="KWD-5I-mSM">
+                        <rect key="frame" x="0.0" y="59" width="393" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" name="backgroundComponents"/>
+                        <color key="tintColor" name="backgroundComponents"/>
+                        <color key="barTintColor" name="backgroundComponents"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                        </textAttributes>
+                        <navigationBarAppearance key="compactAppearance">
+                            <color key="backgroundColor" name="backgroundComponents"/>
+                            <color key="shadowColor" systemColor="secondarySystemFillColor"/>
+                        </navigationBarAppearance>
+                        <navigationBarAppearance key="scrollEdgeAppearance">
+                            <color key="backgroundColor" name="backgroundComponents"/>
+                            <color key="shadowColor" systemColor="secondarySystemFillColor"/>
+                        </navigationBarAppearance>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Y6W-OH-hqX" kind="relationship" relationship="rootViewController" id="Mrg-TW-VsR"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jI7-sT-Q4q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-95.419847328244273" y="10.563380281690142"/>
         </scene>
     </scenes>
     <resources>
+        <namedColor name="backgroundApp">
+            <color red="0.86666667461395264" green="0.86666667461395264" blue="0.86666667461395264" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="backgroundComponents">
+            <color red="0.97254902124404907" green="0.97254902124404907" blue="0.97254902124404907" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="secondarySystemFillColor">
+            <color red="0.47058823529999999" green="0.47058823529999999" blue="0.50196078430000002" alpha="0.16" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
