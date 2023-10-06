@@ -71,8 +71,6 @@ class ViewController: UIViewController {
             unit: "/ day",
             subtitleString: "Average daily spending limit, but you won't.")
         
-     
-        
         today.configureImageAndText(
             title: "Today",
             modeIcon: ModeIcon.percentInv,

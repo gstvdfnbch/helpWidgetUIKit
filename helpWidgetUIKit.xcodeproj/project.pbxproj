@@ -18,6 +18,8 @@
 		7BEFF39C2ACE5CA4005D7FF0 /* ConstantsProject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BEFF39B2ACE5CA4005D7FF0 /* ConstantsProject.swift */; };
 		7BEFF39E2ACE5D7C005D7FF0 /* TitleMonthComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BEFF39D2ACE5D7C005D7FF0 /* TitleMonthComponent.swift */; };
 		7BEFF3A02ACE5D8D005D7FF0 /* TitleMonthComponent.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7BEFF39F2ACE5D8D005D7FF0 /* TitleMonthComponent.xib */; };
+		7BF932FD2AD03DD600641E1A /* MainBoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BF932FC2AD03DD600641E1A /* MainBoardViewController.swift */; };
+		7BF933012AD03E1400641E1A /* MainBoard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7BF933002AD03E1400641E1A /* MainBoard.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +36,8 @@
 		7BEFF39B2ACE5CA4005D7FF0 /* ConstantsProject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstantsProject.swift; sourceTree = "<group>"; };
 		7BEFF39D2ACE5D7C005D7FF0 /* TitleMonthComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleMonthComponent.swift; sourceTree = "<group>"; };
 		7BEFF39F2ACE5D8D005D7FF0 /* TitleMonthComponent.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TitleMonthComponent.xib; sourceTree = "<group>"; };
+		7BF932FC2AD03DD600641E1A /* MainBoardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainBoardViewController.swift; sourceTree = "<group>"; };
+		7BF933002AD03E1400641E1A /* MainBoard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainBoard.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,9 +74,10 @@
 				7B3E65D32ACDA18F000CBBCA /* SceneDelegate.swift */,
 				7BEFF39B2ACE5CA4005D7FF0 /* ConstantsProject.swift */,
 				7B3E65E52ACDA1DF000CBBCA /* CustomComponents */,
+				7BF932FF2AD03DF500641E1A /* LaunchScreen */,
+				7BF933022AD04F5600641E1A /* MainBoard */,
 				7B3E65D52ACDA18F000CBBCA /* ViewController.swift */,
 				7B3E65D72ACDA18F000CBBCA /* Main.storyboard */,
-				7B3E65DC2ACDA190000CBBCA /* LaunchScreen.storyboard */,
 				7B3E65DA2ACDA190000CBBCA /* Assets.xcassets */,
 				7B3E65DF2ACDA190000CBBCA /* Info.plist */,
 			);
@@ -88,6 +93,23 @@
 				7BEFF39F2ACE5D8D005D7FF0 /* TitleMonthComponent.xib */,
 			);
 			path = CustomComponents;
+			sourceTree = "<group>";
+		};
+		7BF932FF2AD03DF500641E1A /* LaunchScreen */ = {
+			isa = PBXGroup;
+			children = (
+				7B3E65DC2ACDA190000CBBCA /* LaunchScreen.storyboard */,
+			);
+			path = LaunchScreen;
+			sourceTree = "<group>";
+		};
+		7BF933022AD04F5600641E1A /* MainBoard */ = {
+			isa = PBXGroup;
+			children = (
+				7BF932FC2AD03DD600641E1A /* MainBoardViewController.swift */,
+				7BF933002AD03E1400641E1A /* MainBoard.storyboard */,
+			);
+			path = MainBoard;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -150,6 +172,7 @@
 			files = (
 				7B3E65DE2ACDA190000CBBCA /* LaunchScreen.storyboard in Resources */,
 				7B3E65E92ACDA257000CBBCA /* CustomView.xib in Resources */,
+				7BF933012AD03E1400641E1A /* MainBoard.storyboard in Resources */,
 				7BEFF3A02ACE5D8D005D7FF0 /* TitleMonthComponent.xib in Resources */,
 				7B3E65DB2ACDA190000CBBCA /* Assets.xcassets in Resources */,
 				7B3E65D92ACDA18F000CBBCA /* Main.storyboard in Resources */,
@@ -167,6 +190,7 @@
 				7B3E65E72ACDA222000CBBCA /* CustomView.swift in Sources */,
 				7BEFF39E2ACE5D7C005D7FF0 /* TitleMonthComponent.swift in Sources */,
 				7BEFF39C2ACE5CA4005D7FF0 /* ConstantsProject.swift in Sources */,
+				7BF932FD2AD03DD600641E1A /* MainBoardViewController.swift in Sources */,
 				7B3E65D22ACDA18F000CBBCA /* AppDelegate.swift in Sources */,
 				7B3E65D42ACDA18F000CBBCA /* SceneDelegate.swift in Sources */,
 			);
@@ -246,7 +270,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -303,7 +327,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -325,7 +349,7 @@
 				INFOPLIST_FILE = helpWidgetUIKit/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = MainBoard.storyboard;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
@@ -334,7 +358,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = gstv.helpWidget.UIKit.helpWidgetUIKit;
+				PRODUCT_BUNDLE_IDENTIFIER = gstv.helpWidget.UIKit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
@@ -357,7 +381,7 @@
 				INFOPLIST_FILE = helpWidgetUIKit/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = MainBoard.storyboard;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
@@ -366,7 +390,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = gstv.helpWidget.UIKit.helpWidgetUIKit;
+				PRODUCT_BUNDLE_IDENTIFIER = gstv.helpWidget.UIKit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
