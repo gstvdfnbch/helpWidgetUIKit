@@ -20,6 +20,8 @@
 		7BEFF3A02ACE5D8D005D7FF0 /* TitleMonthComponent.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7BEFF39F2ACE5D8D005D7FF0 /* TitleMonthComponent.xib */; };
 		7BF932FD2AD03DD600641E1A /* MainBoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BF932FC2AD03DD600641E1A /* MainBoardViewController.swift */; };
 		7BF933012AD03E1400641E1A /* MainBoard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7BF933002AD03E1400641E1A /* MainBoard.storyboard */; };
+		7BFA491C2AD07E9E0091C78C /* CustomTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BFA491B2AD07E9E0091C78C /* CustomTableView.swift */; };
+		7BFA491F2AD084AE0091C78C /* StructDashBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BFA491E2AD084AE0091C78C /* StructDashBoard.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +40,8 @@
 		7BEFF39F2ACE5D8D005D7FF0 /* TitleMonthComponent.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TitleMonthComponent.xib; sourceTree = "<group>"; };
 		7BF932FC2AD03DD600641E1A /* MainBoardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainBoardViewController.swift; sourceTree = "<group>"; };
 		7BF933002AD03E1400641E1A /* MainBoard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainBoard.storyboard; sourceTree = "<group>"; };
+		7BFA491B2AD07E9E0091C78C /* CustomTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableView.swift; sourceTree = "<group>"; };
+		7BFA491E2AD084AE0091C78C /* StructDashBoard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StructDashBoard.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +74,7 @@
 		7B3E65D02ACDA18F000CBBCA /* helpWidgetUIKit */ = {
 			isa = PBXGroup;
 			children = (
+				7BFA491D2AD084960091C78C /* StructDashBoard */,
 				7B3E65D12ACDA18F000CBBCA /* AppDelegate.swift */,
 				7B3E65D32ACDA18F000CBBCA /* SceneDelegate.swift */,
 				7BEFF39B2ACE5CA4005D7FF0 /* ConstantsProject.swift */,
@@ -91,6 +96,7 @@
 				7B3E65E82ACDA257000CBBCA /* CustomView.xib */,
 				7BEFF39D2ACE5D7C005D7FF0 /* TitleMonthComponent.swift */,
 				7BEFF39F2ACE5D8D005D7FF0 /* TitleMonthComponent.xib */,
+				7BFA491B2AD07E9E0091C78C /* CustomTableView.swift */,
 			);
 			path = CustomComponents;
 			sourceTree = "<group>";
@@ -110,6 +116,14 @@
 				7BF933002AD03E1400641E1A /* MainBoard.storyboard */,
 			);
 			path = MainBoard;
+			sourceTree = "<group>";
+		};
+		7BFA491D2AD084960091C78C /* StructDashBoard */ = {
+			isa = PBXGroup;
+			children = (
+				7BFA491E2AD084AE0091C78C /* StructDashBoard.swift */,
+			);
+			path = StructDashBoard;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -192,6 +206,8 @@
 				7BEFF39C2ACE5CA4005D7FF0 /* ConstantsProject.swift in Sources */,
 				7BF932FD2AD03DD600641E1A /* MainBoardViewController.swift in Sources */,
 				7B3E65D22ACDA18F000CBBCA /* AppDelegate.swift in Sources */,
+				7BFA491C2AD07E9E0091C78C /* CustomTableView.swift in Sources */,
+				7BFA491F2AD084AE0091C78C /* StructDashBoard.swift in Sources */,
 				7B3E65D42ACDA18F000CBBCA /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

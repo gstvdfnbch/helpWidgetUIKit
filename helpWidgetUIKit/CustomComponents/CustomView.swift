@@ -47,23 +47,16 @@ class CustomView: UIView {
         self.addSubview(view)
     }
         
-    func configureImageAndText(title : String, 
-                               iconImage : String? = nil,
-                               modeIcon: ModeIcon? = nil,
-                               valueDouble: Double,
-                               percentValue: Double? = nil,
-                               unit: String? = nil,
-                               subtitleString: String? = nil){
+    func configureImageAndText(infos: InfosDashBoard) {
         
-        mainTitle.text = title
+        mainTitle.text = infos.title
         mainTitle.textColor = UIColor(named: "fontColor")
         mainTitle.font = UIFont.boldSystemFont(ofSize: mainTitle.font.pointSize)
         
-        
-        if modeIcon != nil && modeIcon != ModeIcon.basic {
-            if let value = percentValue {
+        if infos.modeIcon != nil && infos.modeIcon != ModeIcon.basic {
+            if let value = infos.percentValue {
                 
-                switch modeIcon {
+                switch infos.modeIcon {
                 case .percent:
                     if value > 0 {
                         icon.image = UIImage(systemName: "arrow.up")
@@ -72,7 +65,7 @@ class CustomView: UIView {
                         icon.image = UIImage(systemName: "arrow.down")
                         icon.tintColor = UIColor.red
                     }
-                    case .percentInv:
+                case .percentInv:
                     if value > 0 {
                         icon.image = UIImage(systemName: "arrow.up")
                         icon.tintColor = UIColor.red
@@ -80,15 +73,14 @@ class CustomView: UIView {
                         icon.image = UIImage(systemName: "arrow.down")
                         icon.tintColor = UIColor.green
                     }
-                    case .basic:
-                        break
-                    case .none:
-                        break
-                    }
+                case .basic:
+                    break
+                case .none:
+                    break
                 }
+            }
         } else {
-            //if let iconPack = UIImage(named: iconImage) {
-            if let iconPack = iconImage {
+            if let iconPack = infos.iconImage {
                 icon.image = UIImage(named: iconPack)
                 icon.tintColor = UIColor.purple
             } else {
@@ -96,24 +88,23 @@ class CustomView: UIView {
             }
         }
         
-        if subtitleString != nil {
-            subtitleNote.text = subtitleString
+        if infos.subtitleString != nil {
+            subtitleNote.text = infos.subtitleString
         } else {
             subtitleNote.isHidden = true
         }
         
-        if unit != nil {
-            unitLabel.text = unit
+        if infos.unit != nil {
+            unitLabel.text = infos.unit
         } else {
             unitLabel.isHidden = true
         }
         
-        value.text = "R$ " + String(valueDouble)
+        value.text = "R$ " + String(infos.valueDouble)
         value.textColor = UIColor(named: "fontColor")
 
         backgroundRounded.clipsToBounds = true
         backgroundRounded.layer.cornerRadius = cornerRadiusProject
-
     }
 }
 
