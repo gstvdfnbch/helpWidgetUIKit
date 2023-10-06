@@ -17,32 +17,87 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bd9-iS-v4w" customClass="CustomView" customModule="helpWidgetUIKit" customModuleProvider="target">
-                                <rect key="frame" x="16" y="75" width="180" height="170"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                            </view>
-                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vVS-0H-H1q" userLabel="Actual Balance" customClass="CustomView" customModule="helpWidgetUIKit" customModuleProvider="target">
-                                <rect key="frame" x="212" y="75" width="165" height="170"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="28e-p7-HK8">
+                                <rect key="frame" x="16" y="75" width="361" height="643"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RL2-T3-dhu" customClass="TitleMonthComponent" customModule="helpWidgetUIKit" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="361" height="102"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    </view>
+                                    <stackView opaque="NO" contentMode="scaleAspectFit" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="P0a-tA-D89">
+                                        <rect key="frame" x="0.0" y="118" width="361" height="103"/>
+                                        <subviews>
+                                            <view contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="bd9-iS-v4w" customClass="CustomView" customModule="helpWidgetUIKit" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="172.66666666666666" height="103"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                            </view>
+                                            <view contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="vVS-0H-H1q" userLabel="Actual Balance" customClass="CustomView" customModule="helpWidgetUIKit" customModuleProvider="target">
+                                                <rect key="frame" x="188.66666666666663" y="0.0" width="172.33333333333337" height="103"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                            </view>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleAspectFit" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="VAa-cS-Bsc">
+                                        <rect key="frame" x="0.0" y="237.00000000000003" width="361" height="102.33333333333334"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5dH-mU-zXd" userLabel="Average Goal" customClass="CustomView" customModule="helpWidgetUIKit" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="172.66666666666666" height="102.33333333333333"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ukh-SC-JXm" userLabel="Spent So Far" customClass="CustomView" customModule="helpWidgetUIKit" customModuleProvider="target">
+                                                <rect key="frame" x="188.66666666666663" y="0.0" width="172.33333333333337" height="102.33333333333333"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                            </view>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleAspectFit" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="AUd-GX-hGR">
+                                        <rect key="frame" x="0.0" y="355.33333333333331" width="361" height="156.33333333333331"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c1s-39-EYJ" userLabel="AverageLeftOver" customClass="CustomView" customModule="helpWidgetUIKit" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="172.66666666666666" height="156.33333333333334"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vj4-W6-ZVs" userLabel="AverageSpent" customClass="CustomView" customModule="helpWidgetUIKit" customModuleProvider="target">
+                                                <rect key="frame" x="188.66666666666663" y="0.0" width="172.33333333333337" height="156.33333333333334"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                            </view>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="pbI-Pb-WA3">
+                                        <rect key="frame" x="0.0" y="527.66666666666663" width="361" height="115.33333333333337"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oss-SB-0X8" userLabel="Today" customClass="CustomView" customModule="helpWidgetUIKit" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="172.66666666666666" height="115.33333333333333"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZM0-pg-32d" userLabel="Yesterday" customClass="CustomView" customModule="helpWidgetUIKit" customModuleProvider="target">
+                                                <rect key="frame" x="188.66666666666663" y="0.0" width="172.33333333333337" height="115.33333333333333"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                            </view>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="vVS-0H-H1q" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="9Qc-Gd-p7V"/>
-                            <constraint firstItem="vVS-0H-H1q" firstAttribute="leading" secondItem="bd9-iS-v4w" secondAttribute="trailing" constant="16" id="E7o-7Z-44d"/>
-                            <constraint firstItem="bd9-iS-v4w" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="Iqf-es-5kq"/>
-                            <constraint firstItem="vVS-0H-H1q" firstAttribute="leading" secondItem="bd9-iS-v4w" secondAttribute="trailing" constant="16" id="VTp-d2-bPn"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="bd9-iS-v4w" secondAttribute="bottom" constant="573" id="ZDR-Bf-nyr"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="vVS-0H-H1q" secondAttribute="trailing" constant="16" id="ftU-FM-e0z"/>
-                            <constraint firstItem="bd9-iS-v4w" firstAttribute="bottom" secondItem="vVS-0H-H1q" secondAttribute="bottom" id="iMn-cw-Tqa"/>
-                            <constraint firstAttribute="trailing" secondItem="bd9-iS-v4w" secondAttribute="trailing" constant="197" id="tJW-kJ-KtL"/>
-                            <constraint firstItem="bd9-iS-v4w" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="xir-53-diw"/>
+                            <constraint firstItem="28e-p7-HK8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="2KE-96-3bU"/>
+                            <constraint firstItem="28e-p7-HK8" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="5LM-o5-V6Z"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="28e-p7-HK8" secondAttribute="trailing" constant="16" id="WG1-Iq-due"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="28e-p7-HK8" secondAttribute="bottom" constant="100" id="WXi-z7-Gcx"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="actualBalance" destination="vVS-0H-H1q" id="oxe-8P-e51"/>
+                        <outlet property="averageGoal" destination="5dH-mU-zXd" id="MuV-fn-l7O"/>
+                        <outlet property="averageLeftOver" destination="c1s-39-EYJ" id="lcA-hz-5f9"/>
+                        <outlet property="averageSpent" destination="Vj4-W6-ZVs" id="Vox-Dh-sVC"/>
+                        <outlet property="spentSoFar" destination="Ukh-SC-JXm" id="5vF-ed-bQM"/>
                         <outlet property="startBalance" destination="bd9-iS-v4w" id="7fc-iI-Mg5"/>
+                        <outlet property="titleMonthComponent" destination="RL2-T3-dhu" id="0iO-gu-INF"/>
+                        <outlet property="today" destination="oss-SB-0X8" id="6nu-Ru-6PW"/>
+                        <outlet property="yesterday" destination="ZM0-pg-32d" id="8nC-Xg-py6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
