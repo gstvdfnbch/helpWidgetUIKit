@@ -22,6 +22,8 @@
 		7B3E65E72ACDA222000CBBCA /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3E65E62ACDA222000CBBCA /* CustomView.swift */; };
 		7B3E65E92ACDA257000CBBCA /* CustomView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B3E65E82ACDA257000CBBCA /* CustomView.xib */; };
 		7B780CB82AD1B89200D28F5B /* ExtentionDoubleFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B780CB72AD1B89200D28F5B /* ExtentionDoubleFormat.swift */; };
+		7B780CBA2AD1BCDB00D28F5B /* Month.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B780CB92AD1BCDB00D28F5B /* Month.swift */; };
+		7B780CBC2AD1BD0D00D28F5B /* Dashboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B780CBB2AD1BD0D00D28F5B /* Dashboard.swift */; };
 		7BAA70F82AD0AFCE00FD343A /* TitleSectionComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BAA70F72AD0AFCE00FD343A /* TitleSectionComponent.swift */; };
 		7BAA70FA2AD0B01600FD343A /* TitleSectionComponent.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7BAA70F92AD0B01600FD343A /* TitleSectionComponent.xib */; };
 		7BEFF39C2ACE5CA4005D7FF0 /* ConstantsProject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BEFF39B2ACE5CA4005D7FF0 /* ConstantsProject.swift */; };
@@ -51,6 +53,8 @@
 		7B3E65E62ACDA222000CBBCA /* CustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
 		7B3E65E82ACDA257000CBBCA /* CustomView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomView.xib; sourceTree = "<group>"; };
 		7B780CB72AD1B89200D28F5B /* ExtentionDoubleFormat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtentionDoubleFormat.swift; sourceTree = "<group>"; };
+		7B780CB92AD1BCDB00D28F5B /* Month.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Month.swift; sourceTree = "<group>"; };
+		7B780CBB2AD1BD0D00D28F5B /* Dashboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dashboard.swift; sourceTree = "<group>"; };
 		7BAA70F72AD0AFCE00FD343A /* TitleSectionComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleSectionComponent.swift; sourceTree = "<group>"; };
 		7BAA70F92AD0B01600FD343A /* TitleSectionComponent.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TitleSectionComponent.xib; sourceTree = "<group>"; };
 		7BEFF39B2ACE5CA4005D7FF0 /* ConstantsProject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstantsProject.swift; sourceTree = "<group>"; };
@@ -105,7 +109,7 @@
 		7B3E65D02ACDA18F000CBBCA /* helpWidgetUIKit */ = {
 			isa = PBXGroup;
 			children = (
-				7BFA491D2AD084960091C78C /* StructDashBoard */,
+				7BFA491D2AD084960091C78C /* DashBoardData */,
 				7B3E65D12ACDA18F000CBBCA /* AppDelegate.swift */,
 				7B3E65D32ACDA18F000CBBCA /* SceneDelegate.swift */,
 				7BEFF39B2ACE5CA4005D7FF0 /* ConstantsProject.swift */,
@@ -152,14 +156,16 @@
 			path = MainBoard;
 			sourceTree = "<group>";
 		};
-		7BFA491D2AD084960091C78C /* StructDashBoard */ = {
+		7BFA491D2AD084960091C78C /* DashBoardData */ = {
 			isa = PBXGroup;
 			children = (
 				7BFA491E2AD084AE0091C78C /* StructDashBoard.swift */,
 				7B2D8FDE2AD1888800C9C50C /* PurchaseManager.swift */,
+				7B780CB92AD1BCDB00D28F5B /* Month.swift */,
+				7B780CBB2AD1BD0D00D28F5B /* Dashboard.swift */,
 				7B2D8FE02AD18B3200C9C50C /* creditcard */,
 			);
-			path = StructDashBoard;
+			path = DashBoardData;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -254,6 +260,8 @@
 				7BFA491C2AD07E9E0091C78C /* CustomTableView.swift in Sources */,
 				7BFA491F2AD084AE0091C78C /* StructDashBoard.swift in Sources */,
 				7B3E65D42ACDA18F000CBBCA /* SceneDelegate.swift in Sources */,
+				7B780CBC2AD1BD0D00D28F5B /* Dashboard.swift in Sources */,
+				7B780CBA2AD1BCDB00D28F5B /* Month.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -58,24 +58,68 @@ extension MainBoardViewController: UITableViewDataSource {
             let cell = tableView.dequeueReusableCell(withIdentifier: TitleSectionComponent.identifier) as! TitleSectionCell
             
         
-        cell.titleSection.configureImageAndText(infos: InfosDashBoard(title: purchaseManagerCenter.months.last?.dashBoard.dashBoardList[section].title ?? "", valueDouble: 0))
+        cell.titleSection.configureImageAndText(infos: InfosDashBoard(title: purchaseManagerCenter.months.last?.dashBoard.dashBoardList[section].title ?? "",typeComp: DashboardItem.nonClick, valueDouble: 0))
 
             return cell
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: DoubleColumn.identifier, for: indexPath) as! DoubleColumn
-  
-        cell.selectionStyle = .none
-        
+          
         if let infos = purchaseManagerCenter.months.last?.dashBoard.dashBoardList[indexPath.section].itens {
-            
-            cell.leftComponent.configureImageAndText(infos: purchaseManagerCenter.months.last?.dashBoard.infosDashBoard(index: infos[indexPath.row * 2].rawValue) ?? InfosDashBoard(title: "", valueDouble: 0))
-            cell.rightComponent.configureImageAndText(infos: purchaseManagerCenter.months.last?.dashBoard.infosDashBoard(index: infos[indexPath.row * 2 + 1].rawValue) ?? InfosDashBoard(title: "", valueDouble: 0))
+            let tapGestureLeft = UITapGestureRecognizer(target: self, action: #selector(handleComponentTap(_:)))
+            let tapGestureRight = UITapGestureRecognizer(target: self, action: #selector(handleComponentTap(_:)))
+
+
+            if let infoLeft = purchaseManagerCenter.months.last {
+                let info = infoLeft.dashBoard.infosDashBoard(index: infos[indexPath.row * 2].rawValue)
+                cell.leftComponent.addGestureRecognizer(tapGestureLeft)
+                cell.leftComponent.tag = info.typeComp.rawValue
+                cell.leftComponent.configureImageAndText(infos: info)
+            }
+           
+
+            if let infoLeft = purchaseManagerCenter.months.last {
+                let info = infoLeft.dashBoard.infosDashBoard(index: infos[indexPath.row * 2 + 1].rawValue)
+
+                cell.rightComponent.addGestureRecognizer(tapGestureRight)
+                cell.rightComponent.tag = info.typeComp.rawValue
+                cell.rightComponent.configureImageAndText(infos: info)
+            }
+
             
         }
     
         return cell
+    }
+    
+    @objc func handleComponentTap(_ sender: UITapGestureRecognizer) {
+        if let tappedView = sender.view {
+            let sideRawValue = tappedView.tag
+               
+            switch DashboardItem(rawValue: sideRawValue) {
+            case .startBalance:
+                print("Você selecionou Start Balance")
+            case .actualBalance:
+                print("Você selecionou Actual Balance")
+            case .averageGoal:
+                print("Você selecionou Average Goal")
+            case .spentSoFar:
+                print("Você selecionou Spent So Far")
+            case .averageLeftOver:
+                print("Você selecionou Average Left Over")
+            case .averageSpent:
+                print("Você selecionou Average Spent")
+            case .today:
+                print("Você selecionou Today")
+            case .yesterday:
+                print("Você selecionou Yesterday")
+            case .nonClick:
+                print("Você selecionou Non-Click")
+            default:
+                print("Seleção não reconhecida")
+            }
+        }
     }
 }
 

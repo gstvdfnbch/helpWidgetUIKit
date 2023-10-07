@@ -61,10 +61,10 @@ class CustomView: UIView {
                     case .percent:
                         if value > 0 {
                             icon.image = UIImage(systemName: "arrow.up")
-                            icon.tintColor = UIColor.green
+                            icon.tintColor = UIColor.systemGreen
                         } else {
                             icon.image = UIImage(systemName: "arrow.down")
-                            icon.tintColor = UIColor.red
+                            icon.tintColor = UIColor.systemRed
                         }
                     case .percentInv:
                         if value > 0 {
