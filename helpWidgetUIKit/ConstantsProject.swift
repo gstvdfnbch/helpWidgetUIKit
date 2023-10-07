@@ -17,3 +17,6 @@ enum ModeIcon {
     case percent
     case percentInv
 }
+
+
+let purchaseListSegue: String = "PurchaseListSegue"

@@ -21,7 +21,7 @@ class PurchaseManager {
             months[index].addPurchase(purchase)
         } else {
             let dateFormatter = DateFormatter()
-            dateFormatter.dateFormat = "yyyy-MM-dd"
+            dateFormatter.dateFormat = "dd-MM-yyyy"
             let dateString = dateFormatter.string(from: purchase.date)
             
             let newMonth = Month(year: year, monthInt: monthInt, dashBoard: Dashboard(), purchases: [purchase], expensesPerDay: [dateString: purchase.amount])

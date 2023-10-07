@@ -61,3 +61,23 @@ class TitleSectionCell: UITableViewCell {
     }
 
 }
+
+
+
+class PurchaseItemCell: UITableViewCell {
+    static let identifier = PurchaseItem.identifier
+    
+    @IBOutlet weak var purchaseItem: PurchaseItem!
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        // Initialization code
+    }
+
+    override func setSelected(_ selected: Bool, animated: Bool) {
+        super.setSelected(selected, animated: animated)
+
+        // Configure the view for the selected state
+    }
+
+}

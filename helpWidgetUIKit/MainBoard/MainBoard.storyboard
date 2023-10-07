@@ -125,11 +125,22 @@
                     <navigationItem key="navigationItem" title="MoneyControll" id="gTf-W0-Egt"/>
                     <connections>
                         <outlet property="tableView" destination="UcE-QL-20V" id="48X-R4-HUo"/>
+                        <segue destination="FK5-3u-JT0" kind="presentation" identifier="PurchaseListSegue" modalPresentationStyle="pageSheet" id="vV4-CZ-RGV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="831.29770992366412" y="10.563380281690142"/>
+        </scene>
+        <!--PurchaseList-->
+        <scene sceneID="g5C-Vk-Xfx">
+            <objects>
+                <viewControllerPlaceholder storyboardName="PurchaseList" id="FK5-3u-JT0" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="xg0-BN-PLe"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hXV-1z-ZlP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1558" y="-109"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="aub-Ie-8PR">
@@ -173,7 +184,7 @@
             <color red="0.97254902124404907" green="0.97254902124404907" blue="0.97254902124404907" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="secondarySystemFillColor">
-            <color red="0.47058823529999999" green="0.47058823529999999" blue="0.50196078430000002" alpha="0.16" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.47058823529411764" green="0.47058823529411764" blue="0.50196078431372548" alpha="0.16" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
