@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7B2D8FDF2AD1888800C9C50C /* PurchaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B2D8FDE2AD1888800C9C50C /* PurchaseManager.swift */; };
+		7B2D8FE62AD18B3200C9C50C /* nubank-2023-09.csv in Resources */ = {isa = PBXBuildFile; fileRef = 7B2D8FE12AD18B3200C9C50C /* nubank-2023-09.csv */; };
+		7B2D8FE72AD18B3200C9C50C /* nubank-2023-08.csv in Resources */ = {isa = PBXBuildFile; fileRef = 7B2D8FE22AD18B3200C9C50C /* nubank-2023-08.csv */; };
+		7B2D8FE82AD18B3200C9C50C /* nubank-2023-06.csv in Resources */ = {isa = PBXBuildFile; fileRef = 7B2D8FE32AD18B3200C9C50C /* nubank-2023-06.csv */; };
+		7B2D8FE92AD18B3200C9C50C /* nubank-2023-07.csv in Resources */ = {isa = PBXBuildFile; fileRef = 7B2D8FE42AD18B3200C9C50C /* nubank-2023-07.csv */; };
+		7B2D8FEA2AD18B3200C9C50C /* nubank-2023-10.csv in Resources */ = {isa = PBXBuildFile; fileRef = 7B2D8FE52AD18B3200C9C50C /* nubank-2023-10.csv */; };
 		7B3E65D22ACDA18F000CBBCA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3E65D12ACDA18F000CBBCA /* AppDelegate.swift */; };
 		7B3E65D42ACDA18F000CBBCA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3E65D32ACDA18F000CBBCA /* SceneDelegate.swift */; };
 		7B3E65D62ACDA18F000CBBCA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3E65D52ACDA18F000CBBCA /* ViewController.swift */; };
@@ -15,12 +21,25 @@
 		7B3E65DE2ACDA190000CBBCA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B3E65DC2ACDA190000CBBCA /* LaunchScreen.storyboard */; };
 		7B3E65E72ACDA222000CBBCA /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3E65E62ACDA222000CBBCA /* CustomView.swift */; };
 		7B3E65E92ACDA257000CBBCA /* CustomView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B3E65E82ACDA257000CBBCA /* CustomView.xib */; };
+		7B780CB82AD1B89200D28F5B /* ExtentionDoubleFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B780CB72AD1B89200D28F5B /* ExtentionDoubleFormat.swift */; };
+		7BAA70F82AD0AFCE00FD343A /* TitleSectionComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BAA70F72AD0AFCE00FD343A /* TitleSectionComponent.swift */; };
+		7BAA70FA2AD0B01600FD343A /* TitleSectionComponent.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7BAA70F92AD0B01600FD343A /* TitleSectionComponent.xib */; };
 		7BEFF39C2ACE5CA4005D7FF0 /* ConstantsProject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BEFF39B2ACE5CA4005D7FF0 /* ConstantsProject.swift */; };
 		7BEFF39E2ACE5D7C005D7FF0 /* TitleMonthComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BEFF39D2ACE5D7C005D7FF0 /* TitleMonthComponent.swift */; };
 		7BEFF3A02ACE5D8D005D7FF0 /* TitleMonthComponent.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7BEFF39F2ACE5D8D005D7FF0 /* TitleMonthComponent.xib */; };
+		7BF932FD2AD03DD600641E1A /* MainBoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BF932FC2AD03DD600641E1A /* MainBoardViewController.swift */; };
+		7BF933012AD03E1400641E1A /* MainBoard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7BF933002AD03E1400641E1A /* MainBoard.storyboard */; };
+		7BFA491C2AD07E9E0091C78C /* CustomTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BFA491B2AD07E9E0091C78C /* CustomTableView.swift */; };
+		7BFA491F2AD084AE0091C78C /* StructDashBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BFA491E2AD084AE0091C78C /* StructDashBoard.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7B2D8FDE2AD1888800C9C50C /* PurchaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseManager.swift; sourceTree = "<group>"; };
+		7B2D8FE12AD18B3200C9C50C /* nubank-2023-09.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "nubank-2023-09.csv"; sourceTree = "<group>"; };
+		7B2D8FE22AD18B3200C9C50C /* nubank-2023-08.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "nubank-2023-08.csv"; sourceTree = "<group>"; };
+		7B2D8FE32AD18B3200C9C50C /* nubank-2023-06.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "nubank-2023-06.csv"; sourceTree = "<group>"; };
+		7B2D8FE42AD18B3200C9C50C /* nubank-2023-07.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "nubank-2023-07.csv"; sourceTree = "<group>"; };
+		7B2D8FE52AD18B3200C9C50C /* nubank-2023-10.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "nubank-2023-10.csv"; sourceTree = "<group>"; };
 		7B3E65CE2ACDA18F000CBBCA /* helpWidgetUIKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = helpWidgetUIKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B3E65D12ACDA18F000CBBCA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7B3E65D32ACDA18F000CBBCA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -31,9 +50,16 @@
 		7B3E65DF2ACDA190000CBBCA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7B3E65E62ACDA222000CBBCA /* CustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
 		7B3E65E82ACDA257000CBBCA /* CustomView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomView.xib; sourceTree = "<group>"; };
+		7B780CB72AD1B89200D28F5B /* ExtentionDoubleFormat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtentionDoubleFormat.swift; sourceTree = "<group>"; };
+		7BAA70F72AD0AFCE00FD343A /* TitleSectionComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleSectionComponent.swift; sourceTree = "<group>"; };
+		7BAA70F92AD0B01600FD343A /* TitleSectionComponent.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TitleSectionComponent.xib; sourceTree = "<group>"; };
 		7BEFF39B2ACE5CA4005D7FF0 /* ConstantsProject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstantsProject.swift; sourceTree = "<group>"; };
 		7BEFF39D2ACE5D7C005D7FF0 /* TitleMonthComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleMonthComponent.swift; sourceTree = "<group>"; };
 		7BEFF39F2ACE5D8D005D7FF0 /* TitleMonthComponent.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TitleMonthComponent.xib; sourceTree = "<group>"; };
+		7BF932FC2AD03DD600641E1A /* MainBoardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainBoardViewController.swift; sourceTree = "<group>"; };
+		7BF933002AD03E1400641E1A /* MainBoard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainBoard.storyboard; sourceTree = "<group>"; };
+		7BFA491B2AD07E9E0091C78C /* CustomTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableView.swift; sourceTree = "<group>"; };
+		7BFA491E2AD084AE0091C78C /* StructDashBoard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StructDashBoard.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +73,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7B2D8FE02AD18B3200C9C50C /* creditcard */ = {
+			isa = PBXGroup;
+			children = (
+				7B2D8FE12AD18B3200C9C50C /* nubank-2023-09.csv */,
+				7B2D8FE22AD18B3200C9C50C /* nubank-2023-08.csv */,
+				7B2D8FE32AD18B3200C9C50C /* nubank-2023-06.csv */,
+				7B2D8FE42AD18B3200C9C50C /* nubank-2023-07.csv */,
+				7B2D8FE52AD18B3200C9C50C /* nubank-2023-10.csv */,
+			);
+			name = creditcard;
+			path = ../../../../Downloads/creditcard;
+			sourceTree = "<group>";
+		};
 		7B3E65C52ACDA18F000CBBCA = {
 			isa = PBXGroup;
 			children = (
@@ -66,13 +105,15 @@
 		7B3E65D02ACDA18F000CBBCA /* helpWidgetUIKit */ = {
 			isa = PBXGroup;
 			children = (
+				7BFA491D2AD084960091C78C /* StructDashBoard */,
 				7B3E65D12ACDA18F000CBBCA /* AppDelegate.swift */,
 				7B3E65D32ACDA18F000CBBCA /* SceneDelegate.swift */,
 				7BEFF39B2ACE5CA4005D7FF0 /* ConstantsProject.swift */,
 				7B3E65E52ACDA1DF000CBBCA /* CustomComponents */,
+				7BF932FF2AD03DF500641E1A /* LaunchScreen */,
+				7BF933022AD04F5600641E1A /* MainBoard */,
 				7B3E65D52ACDA18F000CBBCA /* ViewController.swift */,
 				7B3E65D72ACDA18F000CBBCA /* Main.storyboard */,
-				7B3E65DC2ACDA190000CBBCA /* LaunchScreen.storyboard */,
 				7B3E65DA2ACDA190000CBBCA /* Assets.xcassets */,
 				7B3E65DF2ACDA190000CBBCA /* Info.plist */,
 			);
@@ -82,12 +123,43 @@
 		7B3E65E52ACDA1DF000CBBCA /* CustomComponents */ = {
 			isa = PBXGroup;
 			children = (
-				7B3E65E62ACDA222000CBBCA /* CustomView.swift */,
+				7BAA70F92AD0B01600FD343A /* TitleSectionComponent.xib */,
+				7BAA70F72AD0AFCE00FD343A /* TitleSectionComponent.swift */,
 				7B3E65E82ACDA257000CBBCA /* CustomView.xib */,
-				7BEFF39D2ACE5D7C005D7FF0 /* TitleMonthComponent.swift */,
+				7B3E65E62ACDA222000CBBCA /* CustomView.swift */,
 				7BEFF39F2ACE5D8D005D7FF0 /* TitleMonthComponent.xib */,
+				7BEFF39D2ACE5D7C005D7FF0 /* TitleMonthComponent.swift */,
+				7BFA491B2AD07E9E0091C78C /* CustomTableView.swift */,
+				7B780CB72AD1B89200D28F5B /* ExtentionDoubleFormat.swift */,
 			);
 			path = CustomComponents;
+			sourceTree = "<group>";
+		};
+		7BF932FF2AD03DF500641E1A /* LaunchScreen */ = {
+			isa = PBXGroup;
+			children = (
+				7B3E65DC2ACDA190000CBBCA /* LaunchScreen.storyboard */,
+			);
+			path = LaunchScreen;
+			sourceTree = "<group>";
+		};
+		7BF933022AD04F5600641E1A /* MainBoard */ = {
+			isa = PBXGroup;
+			children = (
+				7BF932FC2AD03DD600641E1A /* MainBoardViewController.swift */,
+				7BF933002AD03E1400641E1A /* MainBoard.storyboard */,
+			);
+			path = MainBoard;
+			sourceTree = "<group>";
+		};
+		7BFA491D2AD084960091C78C /* StructDashBoard */ = {
+			isa = PBXGroup;
+			children = (
+				7BFA491E2AD084AE0091C78C /* StructDashBoard.swift */,
+				7B2D8FDE2AD1888800C9C50C /* PurchaseManager.swift */,
+				7B2D8FE02AD18B3200C9C50C /* creditcard */,
+			);
+			path = StructDashBoard;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -150,7 +222,14 @@
 			files = (
 				7B3E65DE2ACDA190000CBBCA /* LaunchScreen.storyboard in Resources */,
 				7B3E65E92ACDA257000CBBCA /* CustomView.xib in Resources */,
+				7B2D8FE92AD18B3200C9C50C /* nubank-2023-07.csv in Resources */,
+				7BF933012AD03E1400641E1A /* MainBoard.storyboard in Resources */,
+				7BAA70FA2AD0B01600FD343A /* TitleSectionComponent.xib in Resources */,
+				7B2D8FEA2AD18B3200C9C50C /* nubank-2023-10.csv in Resources */,
+				7B2D8FE82AD18B3200C9C50C /* nubank-2023-06.csv in Resources */,
 				7BEFF3A02ACE5D8D005D7FF0 /* TitleMonthComponent.xib in Resources */,
+				7B2D8FE72AD18B3200C9C50C /* nubank-2023-08.csv in Resources */,
+				7B2D8FE62AD18B3200C9C50C /* nubank-2023-09.csv in Resources */,
 				7B3E65DB2ACDA190000CBBCA /* Assets.xcassets in Resources */,
 				7B3E65D92ACDA18F000CBBCA /* Main.storyboard in Resources */,
 			);
@@ -165,9 +244,15 @@
 			files = (
 				7B3E65D62ACDA18F000CBBCA /* ViewController.swift in Sources */,
 				7B3E65E72ACDA222000CBBCA /* CustomView.swift in Sources */,
+				7BAA70F82AD0AFCE00FD343A /* TitleSectionComponent.swift in Sources */,
 				7BEFF39E2ACE5D7C005D7FF0 /* TitleMonthComponent.swift in Sources */,
+				7B780CB82AD1B89200D28F5B /* ExtentionDoubleFormat.swift in Sources */,
 				7BEFF39C2ACE5CA4005D7FF0 /* ConstantsProject.swift in Sources */,
+				7BF932FD2AD03DD600641E1A /* MainBoardViewController.swift in Sources */,
+				7B2D8FDF2AD1888800C9C50C /* PurchaseManager.swift in Sources */,
 				7B3E65D22ACDA18F000CBBCA /* AppDelegate.swift in Sources */,
+				7BFA491C2AD07E9E0091C78C /* CustomTableView.swift in Sources */,
+				7BFA491F2AD084AE0091C78C /* StructDashBoard.swift in Sources */,
 				7B3E65D42ACDA18F000CBBCA /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -246,7 +331,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -303,7 +388,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -325,7 +410,7 @@
 				INFOPLIST_FILE = helpWidgetUIKit/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = MainBoard.storyboard;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
@@ -334,7 +419,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = gstv.helpWidget.UIKit.helpWidgetUIKit;
+				PRODUCT_BUNDLE_IDENTIFIER = gstv.helpWidget.UIKit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
@@ -357,7 +442,7 @@
 				INFOPLIST_FILE = helpWidgetUIKit/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = MainBoard.storyboard;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
@@ -366,7 +451,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = gstv.helpWidget.UIKit.helpWidgetUIKit;
+				PRODUCT_BUNDLE_IDENTIFIER = gstv.helpWidget.UIKit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
