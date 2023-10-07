@@ -27,30 +27,50 @@ extension MainBoardViewController: UITableViewDelegate{
         
         print("tap here!")
     }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableView.automaticDimension
+    }
 }
 
 extension MainBoardViewController: UITableViewDataSource {
     
    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 4 //define o numero de linhas na tabela
+       guard let section = dashBoardList[section].itens else { return 0 }
+       print("linhas \(section.count)")
+       return section.count/2 //define o numero de linhas na tabela
+    }
+//    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        print("section \(dashBoardList.count)")
+
+        return dashBoardList.count
+    }
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        //print(section)
+        
+            let cell = tableView.dequeueReusableCell(withIdentifier: TitleSectionComponent.identifier) as! TitleSectionCell
+            
+            cell.titleSection.configureImageAndText(infos: InfosDashBoard(title: dashBoardList[section].title, valueDouble: 90))
+            
+            return cell
+
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-        let cell = tableView.dequeueReusableCell(withIdentifier: TitleSectionComponent.identifier, for: indexPath) as! TitleSectionCell
-
-       
-        cell.titleSection.configureImageAndText(infos: InfosDashBoard(title: "gustavo", valueDouble: 90))       
-        
-        //        let cell = tableView.dequeueReusableCell(withIdentifier: DoubleColumn.identifier, for: indexPath) as! DoubleColumn
+        let cell = tableView.dequeueReusableCell(withIdentifier: DoubleColumn.identifier, for: indexPath) as! DoubleColumn
   
-//        cell.selectionStyle = .none
-//        
-//        cell.leftComponent.configureImageAndText(infos: dashBoardList[indexPath.row * 2])
-//
-//        cell.rightComponent.configureImageAndText(infos: dashBoardList[indexPath.row * 2 + 1])
+        cell.selectionStyle = .none
         
-        print(indexPath)
+        if let infos = dashBoardList[indexPath.section].itens {
+            
+            cell.leftComponent.configureImageAndText(infos: infos[indexPath.row * 2])
+            cell.rightComponent.configureImageAndText(infos: infos[indexPath.row * 2 + 1])
+            
+        }
+    
+        //print(indexPath)
         return cell
     }
 }

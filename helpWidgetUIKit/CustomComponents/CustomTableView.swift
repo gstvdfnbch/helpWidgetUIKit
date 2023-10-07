@@ -25,7 +25,7 @@ class TitleMonthComponentTableViewCell: UITableViewCell {
 }
 
 class DoubleColumn: UITableViewCell {
-    static let identifier = CustomView.identifier
+    static let identifier = "DoubleColumn"
     
     @IBOutlet weak var leftComponent: CustomView!
     

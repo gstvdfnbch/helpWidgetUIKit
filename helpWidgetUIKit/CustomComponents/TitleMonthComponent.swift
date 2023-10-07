@@ -34,7 +34,7 @@ class TitleMonthComponent: UIView {
         
         self.addSubview(view)
     }
-    
+
     func sendData(titleMnt: String, subtitleMnt: String) {
         titleMonth.text = titleMnt
         titlePeriod.text = subtitleMnt
