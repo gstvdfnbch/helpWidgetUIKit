@@ -20,10 +20,10 @@ class MainBoardViewController: UIViewController {
         tableView.dataSource = self
         
         purchaseManagerCenter.importFromCSV(filePath: Bundle.main.path(forResource: "nubank-2023-06", ofType: "csv") ?? "")
-        purchaseManagerCenter.importFromCSV(filePath: Bundle.main.path(forResource: "nubank-2023-07", ofType: "csv") ?? "")
-        purchaseManagerCenter.importFromCSV(filePath: Bundle.main.path(forResource: "nubank-2023-08", ofType: "csv") ?? "")
-        purchaseManagerCenter.importFromCSV(filePath: Bundle.main.path(forResource: "nubank-2023-09", ofType: "csv") ?? "")
-        purchaseManagerCenter.importFromCSV(filePath: Bundle.main.path(forResource: "nubank-2023-10", ofType: "csv") ?? "")
+//        purchaseManagerCenter.importFromCSV(filePath: Bundle.main.path(forResource: "nubank-2023-07", ofType: "csv") ?? "")
+//        purchaseManagerCenter.importFromCSV(filePath: Bundle.main.path(forResource: "nubank-2023-08", ofType: "csv") ?? "")
+//        purchaseManagerCenter.importFromCSV(filePath: Bundle.main.path(forResource: "nubank-2023-09", ofType: "csv") ?? "")
+//        purchaseManagerCenter.importFromCSV(filePath: Bundle.main.path(forResource: "nubank-2023-10", ofType: "csv") ?? "")
         
         
         purchaseManagerCenter.debugGSTV()
@@ -46,21 +46,21 @@ extension MainBoardViewController: UITableViewDelegate{
 extension MainBoardViewController: UITableViewDataSource {
     
    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-       guard let section = dashBoardList[section].itens else { return 0 }
+       guard let section = purchaseManagerCenter.months.last?.dashBoard.dashBoardList[section].itens else { return 0 }
        return section.count/2 //define o numero de linhas na tabela
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return dashBoardList.count
+        return purchaseManagerCenter.months.last?.dashBoard.dashBoardList.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
             let cell = tableView.dequeueReusableCell(withIdentifier: TitleSectionComponent.identifier) as! TitleSectionCell
             
-            cell.titleSection.configureImageAndText(infos: InfosDashBoard(title: dashBoardList[section].title, valueDouble: 90))
-            
-            return cell
+        
+        cell.titleSection.configureImageAndText(infos: InfosDashBoard(title: purchaseManagerCenter.months.last?.dashBoard.dashBoardList[section].title ?? "", valueDouble: 0))
 
+            return cell
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -68,10 +68,10 @@ extension MainBoardViewController: UITableViewDataSource {
   
         cell.selectionStyle = .none
         
-        if let infos = dashBoardList[indexPath.section].itens {
+        if let infos = purchaseManagerCenter.months.last?.dashBoard.dashBoardList[indexPath.section].itens {
             
-            cell.leftComponent.configureImageAndText(infos: infos[indexPath.row * 2])
-            cell.rightComponent.configureImageAndText(infos: infos[indexPath.row * 2 + 1])
+            cell.leftComponent.configureImageAndText(infos: purchaseManagerCenter.months.last?.dashBoard.infosDashBoard(index: infos[indexPath.row * 2].rawValue) ?? InfosDashBoard(title: "", valueDouble: 0))
+            cell.rightComponent.configureImageAndText(infos: purchaseManagerCenter.months.last?.dashBoard.infosDashBoard(index: infos[indexPath.row * 2 + 1].rawValue) ?? InfosDashBoard(title: "", valueDouble: 0))
             
         }
     

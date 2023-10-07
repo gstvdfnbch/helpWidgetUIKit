@@ -16,14 +16,52 @@ struct Purchase {
 }
 
 struct Dashboard{
-    var startBalance: Double = 0
-    var actualBalance: Double = 0
-    var averageGoal: Double = 0
-    var spentSoFar: Double = 0
-    var averageSpent: Double = 0
-    var averageLeftOver: Double = 0
-    var today: Double = 0
-    var yesterday: Double = 0
+
+    var componentsListValues: [(Double, Double)] = Array(repeating: (0.0, 0.0), count: dashboarCount)
+    
+    
+    var componentsList: [InfosDashBoard] = [
+        InfosDashBoard(title: "Start Balance", iconImage: "start", valueDouble: 0.0),
+        InfosDashBoard(title: "Actual Balance", iconImage: "wallet", valueDouble: 0.0),
+        InfosDashBoard(title: "Average\nGoal", iconImage: "target", valueDouble: 0.0, subtitleString: "This is THE right way! :)"),
+        InfosDashBoard(title: "Spent\nSo Far", iconImage: "expenses", valueDouble: 0.0, subtitleString: "Remeber to save money."),
+        
+        InfosDashBoard(title: "Average\nSpent", modeIcon: ModeIcon.percentInv, valueDouble: 0.0, percentValue: 0.0, unit: "/ day", subtitleString: "Average daily spending you have done so far."),
+        InfosDashBoard(title: "Average \nLeft Over", modeIcon: ModeIcon.percent, valueDouble: 0.0, percentValue: 0.0, unit: "/ day", subtitleString: "Average daily spending limit, but you won't."),
+        
+        InfosDashBoard(title: "Today", modeIcon: ModeIcon.percentInv, valueDouble: 0.0, percentValue: 0.0, subtitleString: "How much you spent today."),
+        InfosDashBoard(title: "Yesterday", modeIcon: ModeIcon.percentInv, valueDouble: 0.0, percentValue: 0.0, subtitleString: "How much you spent yesterday.")
+    ]
+    
+    let dashBoardList: [TableViewDashBoard] = [
+        TableViewDashBoard(title: "General Infos",
+                           itens: [
+                            DashboardItem.startBalance,
+                            DashboardItem.actualBalance,
+                            DashboardItem.averageGoal,
+                            DashboardItem.spentSoFar]
+                          ),
+        TableViewDashBoard(title: "Chart Expenses",
+                           itens: []),
+        TableViewDashBoard(title: "Expenses Review",
+                           itens: [
+                            DashboardItem.averageSpent,
+                            DashboardItem.averageLeftOver,
+                            DashboardItem.today,
+                            DashboardItem.yesterday]
+                          )
+    ]
+    
+    func infosDashBoard (index: Int) -> InfosDashBoard {
+        return componentsList[index]
+    }
+    
+    mutating func updateValuesDashboard() {
+        for item in 0..<componentsListValues.count {
+            componentsList[item].valueDouble = componentsListValues[item].0
+            componentsList[item].percentValue = componentsListValues[item].1
+        }
+    }
 }
 
 // Define an enum CSV columns
@@ -44,23 +82,49 @@ struct Month {
     
     mutating func updateAllValues(){
         
-        if self.dashBoard.startBalance > 0 {
-            self.dashBoard.actualBalance = self.dashBoard.startBalance - self.dashBoard.spentSoFar
+        if self.dashBoard.componentsListValues[DashboardItem.startBalance.rawValue].0 > 0 {
+            let value = self.dashBoard.componentsListValues[DashboardItem.startBalance.rawValue].0 - self.dashBoard.componentsListValues[DashboardItem.spentSoFar.rawValue].0
+            
+            self.changeValue(dashItem: DashboardItem.actualBalance, typeValue: .value, value: value)
+
         } else {
-            self.dashBoard.startBalance = 0
-            self.dashBoard.actualBalance = 0
+            self.changeValue(dashItem: DashboardItem.startBalance, typeValue: .value, value: 0)
+            self.changeValue(dashItem: DashboardItem.actualBalance, typeValue: .value, value: 0)
         }
         
-        self.dashBoard.averageGoal = self.averageGoalCalc()
-        self.dashBoard.spentSoFar = self.totalExpenses()
-        self.dashBoard.averageSpent = self.averageSpent()
-        self.dashBoard.averageLeftOver = self.averageLeftOver()
-        self.dashBoard.today = self.todayExpenses()
-        self.dashBoard.yesterday = self.yesterdayExpenses()
+        
+        self.changeValue(dashItem: DashboardItem.averageGoal, typeValue: .value, value: self.averageGoalCalc())
+        self.changeValue(dashItem: DashboardItem.spentSoFar, typeValue: .value, value: -self.totalExpenses())
+        self.changeValue(dashItem: DashboardItem.averageSpent, typeValue: .value, value: self.averageSpent())
+        self.changeValue(dashItem: DashboardItem.averageLeftOver, typeValue: .value, value: self.averageLeftOver())
+        self.changeValue(dashItem: DashboardItem.today, typeValue: .value, value: self.todayExpenses())
+        self.changeValue(dashItem: DashboardItem.yesterday, typeValue: .value, value: self.yesterdayExpenses())
+        
+        self.dashBoard.updateValuesDashboard()
+
+    }
+    
+    mutating func changeValue(dashItem: DashboardItem, typeValue: TypeValue, value: Double){
+        
+        switch typeValue {
+        case .value:
+            self.dashBoard.componentsListValues[dashItem.rawValue].0 = value
+        case .percent:
+            self.dashBoard.componentsListValues[dashItem.rawValue].1 = value
+        }
+    }
+    
+    func valueOf(dashItem: DashboardItem, typeValue: TypeValue) -> Double {
+        switch typeValue {
+        case .value:
+            return self.dashBoard.componentsListValues[dashItem.rawValue].0
+        case .percent:
+            return self.dashBoard.componentsListValues[dashItem.rawValue].1
+        }
     }
     
     func averageGoalCalc() -> Double{
-        let valueCalc = self.dashBoard.startBalance / Double(self.totalDaysInMonth())
+        let valueCalc = valueOf(dashItem: .startBalance, typeValue: .value) / Double(self.totalDaysInMonth())
         return valueCalc
     }
     
@@ -71,12 +135,11 @@ struct Month {
     }
     
     func averageLeftOver() -> Double {
-        let valueCalc = (self.dashBoard.startBalance - self.totalExpenses()) / Double(self.totalDaysInMonth() - self.expensesPerDay.count)
+        let valueCalc = (valueOf(dashItem: .startBalance, typeValue: .value) - self.totalExpenses()) / Double(self.totalDaysInMonth() - self.expensesPerDay.count)
         
         return valueCalc
     }
-    
-    
+        
     func todayExpenses() -> Double {
         let currentDate = Date()
         let dateFormatter = DateFormatter()
@@ -200,18 +263,18 @@ class PurchaseManager {
     
     func debugGSTV(){
         
-        print("Quantidade de Meses \(months.count)")
-        print("startBalance: \(self.months.last?.dashBoard.startBalance)")
-        print("actualBalance: \(self.months.last?.dashBoard.actualBalance)")
-        print("averageGoal: \(self.months.last?.dashBoard.averageGoal)")
-        print("spendSoFar: \(self.months.last?.dashBoard.spentSoFar)")
-        print("averageSpent: \(self.months.last?.dashBoard.averageSpent)")
-        print("averageLeftOver: \(self.months.last?.dashBoard.averageLeftOver)")
-        print("today: \(self.months.last?.dashBoard.today)")
-        print("yesterday: \(self.months.last?.dashBoard.yesterday)")
-        
+//        print("Quantidade de Meses \(months.count)")
+//        print("startBalance: \(self.months.last?.dashBoard.startBalance)")
+//        print("actualBalance: \(self.months.last?.dashBoard.actualBalance)")
+//        print("averageGoal: \(self.months.last?.dashBoard.averageGoal)")
+//        print("spendSoFar: \(self.months.last?.dashBoard.spentSoFar)")
+//        print("averageSpent: \(self.months.last?.dashBoard.averageSpent)")
+//        print("averageLeftOver: \(self.months.last?.dashBoard.averageLeftOver)")
+//        print("today: \(self.months.last?.dashBoard.today)")
+//        print("yesterday: \(self.months.last?.dashBoard.yesterday)")
+//        
         for month in months {
-            print("Compras \(month.monthInt):  \(month.averageExpensePerDay())")
+            print("Compras \(month.monthInt):  \(month.dashBoard.componentsList[DashboardItem.spentSoFar.rawValue])")
         }
     }
 }

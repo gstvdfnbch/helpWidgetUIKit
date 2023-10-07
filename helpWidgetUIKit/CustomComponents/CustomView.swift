@@ -54,29 +54,34 @@ class CustomView: UIView {
         mainTitle.font = UIFont.boldSystemFont(ofSize: mainTitle.font.pointSize)
         
         if infos.modeIcon != nil && infos.modeIcon != ModeIcon.basic {
-            if let value = infos.percentValue {
+            if let value = infos.percentValue  {
                 
-                switch infos.modeIcon {
-                case .percent:
-                    if value > 0 {
-                        icon.image = UIImage(systemName: "arrow.up")
-                        icon.tintColor = UIColor.green
-                    } else {
-                        icon.image = UIImage(systemName: "arrow.down")
-                        icon.tintColor = UIColor.red
+                if value != 0 {
+                    switch infos.modeIcon {
+                    case .percent:
+                        if value > 0 {
+                            icon.image = UIImage(systemName: "arrow.up")
+                            icon.tintColor = UIColor.green
+                        } else {
+                            icon.image = UIImage(systemName: "arrow.down")
+                            icon.tintColor = UIColor.red
+                        }
+                    case .percentInv:
+                        if value > 0 {
+                            icon.image = UIImage(systemName: "arrow.up")
+                            icon.tintColor = UIColor.systemRed
+                        } else {
+                            icon.image = UIImage(systemName: "arrow.down")
+                            icon.tintColor = UIColor.systemGreen
+                        }
+                    case .basic:
+                        break
+                    case .none:
+                        break
                     }
-                case .percentInv:
-                    if value > 0 {
-                        icon.image = UIImage(systemName: "arrow.up")
-                        icon.tintColor = UIColor.systemRed
-                    } else {
-                        icon.image = UIImage(systemName: "arrow.down")
-                        icon.tintColor = UIColor.systemGreen
-                    }
-                case .basic:
-                    break
-                case .none:
-                    break
+                } else {
+                    icon.image = UIImage(systemName: "arrow.up.arrow.down")
+                    icon.tintColor = UIColor.secondaryLabel
                 }
             }
         } else {
@@ -99,7 +104,7 @@ class CustomView: UIView {
             unitLabel.isHidden = true
         }
         
-        value.text = "R$ " + String(infos.valueDouble)
+        value.text = "R$ " + infos.valueDouble.formatToFixedDecimalPlaces(2)
         value.textColor = UIColor(named: "fontColor")
 
         backgroundRounded.clipsToBounds = true
