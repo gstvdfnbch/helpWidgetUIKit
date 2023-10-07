@@ -11,12 +11,22 @@ class MainBoardViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     
+    var purchaseManagerCenter: PurchaseManager = PurchaseManager()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         tableView.delegate = self
         tableView.dataSource = self
         
+        purchaseManagerCenter.importFromCSV(filePath: Bundle.main.path(forResource: "nubank-2023-06", ofType: "csv") ?? "")
+        purchaseManagerCenter.importFromCSV(filePath: Bundle.main.path(forResource: "nubank-2023-07", ofType: "csv") ?? "")
+        purchaseManagerCenter.importFromCSV(filePath: Bundle.main.path(forResource: "nubank-2023-08", ofType: "csv") ?? "")
+        purchaseManagerCenter.importFromCSV(filePath: Bundle.main.path(forResource: "nubank-2023-09", ofType: "csv") ?? "")
+        purchaseManagerCenter.importFromCSV(filePath: Bundle.main.path(forResource: "nubank-2023-10", ofType: "csv") ?? "")
+        
+        
+        purchaseManagerCenter.debugGSTV()
     }
     
 }
@@ -37,19 +47,14 @@ extension MainBoardViewController: UITableViewDataSource {
     
    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
        guard let section = dashBoardList[section].itens else { return 0 }
-       print("linhas \(section.count)")
        return section.count/2 //define o numero de linhas na tabela
     }
-//    
+    
     func numberOfSections(in tableView: UITableView) -> Int {
-        print("section \(dashBoardList.count)")
-
         return dashBoardList.count
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        //print(section)
-        
             let cell = tableView.dequeueReusableCell(withIdentifier: TitleSectionComponent.identifier) as! TitleSectionCell
             
             cell.titleSection.configureImageAndText(infos: InfosDashBoard(title: dashBoardList[section].title, valueDouble: 90))
@@ -70,7 +75,6 @@ extension MainBoardViewController: UITableViewDataSource {
             
         }
     
-        //print(indexPath)
         return cell
     }
 }

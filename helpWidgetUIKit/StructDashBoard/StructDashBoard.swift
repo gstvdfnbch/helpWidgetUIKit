@@ -37,8 +37,7 @@ struct TableViewDashBoard {
 
 
 let dashBoardList: [TableViewDashBoard] = [
-    TableViewDashBoard(title: "October",
-                       subtitle: "07 - 14 June 2023",
+    TableViewDashBoard(title: "General Infos",
                        itens: [
                         componentsList[DashboardItem.startBalance.rawValue],
                         componentsList[DashboardItem.actualBalance.rawValue],

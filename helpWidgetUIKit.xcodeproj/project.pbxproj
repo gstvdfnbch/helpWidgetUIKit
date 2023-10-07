@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7B2D8FDF2AD1888800C9C50C /* PurchaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B2D8FDE2AD1888800C9C50C /* PurchaseManager.swift */; };
+		7B2D8FE62AD18B3200C9C50C /* nubank-2023-09.csv in Resources */ = {isa = PBXBuildFile; fileRef = 7B2D8FE12AD18B3200C9C50C /* nubank-2023-09.csv */; };
+		7B2D8FE72AD18B3200C9C50C /* nubank-2023-08.csv in Resources */ = {isa = PBXBuildFile; fileRef = 7B2D8FE22AD18B3200C9C50C /* nubank-2023-08.csv */; };
+		7B2D8FE82AD18B3200C9C50C /* nubank-2023-06.csv in Resources */ = {isa = PBXBuildFile; fileRef = 7B2D8FE32AD18B3200C9C50C /* nubank-2023-06.csv */; };
+		7B2D8FE92AD18B3200C9C50C /* nubank-2023-07.csv in Resources */ = {isa = PBXBuildFile; fileRef = 7B2D8FE42AD18B3200C9C50C /* nubank-2023-07.csv */; };
+		7B2D8FEA2AD18B3200C9C50C /* nubank-2023-10.csv in Resources */ = {isa = PBXBuildFile; fileRef = 7B2D8FE52AD18B3200C9C50C /* nubank-2023-10.csv */; };
 		7B3E65D22ACDA18F000CBBCA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3E65D12ACDA18F000CBBCA /* AppDelegate.swift */; };
 		7B3E65D42ACDA18F000CBBCA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3E65D32ACDA18F000CBBCA /* SceneDelegate.swift */; };
 		7B3E65D62ACDA18F000CBBCA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3E65D52ACDA18F000CBBCA /* ViewController.swift */; };
@@ -27,6 +33,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7B2D8FDE2AD1888800C9C50C /* PurchaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseManager.swift; sourceTree = "<group>"; };
+		7B2D8FE12AD18B3200C9C50C /* nubank-2023-09.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "nubank-2023-09.csv"; sourceTree = "<group>"; };
+		7B2D8FE22AD18B3200C9C50C /* nubank-2023-08.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "nubank-2023-08.csv"; sourceTree = "<group>"; };
+		7B2D8FE32AD18B3200C9C50C /* nubank-2023-06.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "nubank-2023-06.csv"; sourceTree = "<group>"; };
+		7B2D8FE42AD18B3200C9C50C /* nubank-2023-07.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "nubank-2023-07.csv"; sourceTree = "<group>"; };
+		7B2D8FE52AD18B3200C9C50C /* nubank-2023-10.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "nubank-2023-10.csv"; sourceTree = "<group>"; };
 		7B3E65CE2ACDA18F000CBBCA /* helpWidgetUIKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = helpWidgetUIKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B3E65D12ACDA18F000CBBCA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7B3E65D32ACDA18F000CBBCA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -59,6 +71,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7B2D8FE02AD18B3200C9C50C /* creditcard */ = {
+			isa = PBXGroup;
+			children = (
+				7B2D8FE12AD18B3200C9C50C /* nubank-2023-09.csv */,
+				7B2D8FE22AD18B3200C9C50C /* nubank-2023-08.csv */,
+				7B2D8FE32AD18B3200C9C50C /* nubank-2023-06.csv */,
+				7B2D8FE42AD18B3200C9C50C /* nubank-2023-07.csv */,
+				7B2D8FE52AD18B3200C9C50C /* nubank-2023-10.csv */,
+			);
+			name = creditcard;
+			path = ../../../../Downloads/creditcard;
+			sourceTree = "<group>";
+		};
 		7B3E65C52ACDA18F000CBBCA = {
 			isa = PBXGroup;
 			children = (
@@ -128,6 +153,8 @@
 			isa = PBXGroup;
 			children = (
 				7BFA491E2AD084AE0091C78C /* StructDashBoard.swift */,
+				7B2D8FDE2AD1888800C9C50C /* PurchaseManager.swift */,
+				7B2D8FE02AD18B3200C9C50C /* creditcard */,
 			);
 			path = StructDashBoard;
 			sourceTree = "<group>";
@@ -192,9 +219,14 @@
 			files = (
 				7B3E65DE2ACDA190000CBBCA /* LaunchScreen.storyboard in Resources */,
 				7B3E65E92ACDA257000CBBCA /* CustomView.xib in Resources */,
+				7B2D8FE92AD18B3200C9C50C /* nubank-2023-07.csv in Resources */,
 				7BF933012AD03E1400641E1A /* MainBoard.storyboard in Resources */,
 				7BAA70FA2AD0B01600FD343A /* TitleSectionComponent.xib in Resources */,
+				7B2D8FEA2AD18B3200C9C50C /* nubank-2023-10.csv in Resources */,
+				7B2D8FE82AD18B3200C9C50C /* nubank-2023-06.csv in Resources */,
 				7BEFF3A02ACE5D8D005D7FF0 /* TitleMonthComponent.xib in Resources */,
+				7B2D8FE72AD18B3200C9C50C /* nubank-2023-08.csv in Resources */,
+				7B2D8FE62AD18B3200C9C50C /* nubank-2023-09.csv in Resources */,
 				7B3E65DB2ACDA190000CBBCA /* Assets.xcassets in Resources */,
 				7B3E65D92ACDA18F000CBBCA /* Main.storyboard in Resources */,
 			);
@@ -213,6 +245,7 @@
 				7BEFF39E2ACE5D7C005D7FF0 /* TitleMonthComponent.swift in Sources */,
 				7BEFF39C2ACE5CA4005D7FF0 /* ConstantsProject.swift in Sources */,
 				7BF932FD2AD03DD600641E1A /* MainBoardViewController.swift in Sources */,
+				7B2D8FDF2AD1888800C9C50C /* PurchaseManager.swift in Sources */,
 				7B3E65D22ACDA18F000CBBCA /* AppDelegate.swift in Sources */,
 				7BFA491C2AD07E9E0091C78C /* CustomTableView.swift in Sources */,
 				7BFA491F2AD084AE0091C78C /* StructDashBoard.swift in Sources */,
