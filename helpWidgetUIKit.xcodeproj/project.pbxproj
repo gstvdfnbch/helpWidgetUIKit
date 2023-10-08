@@ -13,6 +13,8 @@
 		7B2D8FE82AD18B3200C9C50C /* nubank-2023-06.csv in Resources */ = {isa = PBXBuildFile; fileRef = 7B2D8FE32AD18B3200C9C50C /* nubank-2023-06.csv */; };
 		7B2D8FE92AD18B3200C9C50C /* nubank-2023-07.csv in Resources */ = {isa = PBXBuildFile; fileRef = 7B2D8FE42AD18B3200C9C50C /* nubank-2023-07.csv */; };
 		7B2D8FEA2AD18B3200C9C50C /* nubank-2023-10.csv in Resources */ = {isa = PBXBuildFile; fileRef = 7B2D8FE52AD18B3200C9C50C /* nubank-2023-10.csv */; };
+		7B3B30092AD2243800858817 /* AddPurchaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3B30082AD2243800858817 /* AddPurchaseViewController.swift */; };
+		7B3B300B2AD2244300858817 /* AddPurchase.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B3B300A2AD2244300858817 /* AddPurchase.storyboard */; };
 		7B3E65D22ACDA18F000CBBCA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3E65D12ACDA18F000CBBCA /* AppDelegate.swift */; };
 		7B3E65D42ACDA18F000CBBCA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3E65D32ACDA18F000CBBCA /* SceneDelegate.swift */; };
 		7B3E65DB2ACDA190000CBBCA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7B3E65DA2ACDA190000CBBCA /* Assets.xcassets */; };
@@ -44,6 +46,8 @@
 		7B2D8FE32AD18B3200C9C50C /* nubank-2023-06.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "nubank-2023-06.csv"; sourceTree = "<group>"; };
 		7B2D8FE42AD18B3200C9C50C /* nubank-2023-07.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "nubank-2023-07.csv"; sourceTree = "<group>"; };
 		7B2D8FE52AD18B3200C9C50C /* nubank-2023-10.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "nubank-2023-10.csv"; sourceTree = "<group>"; };
+		7B3B30082AD2243800858817 /* AddPurchaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPurchaseViewController.swift; sourceTree = "<group>"; };
+		7B3B300A2AD2244300858817 /* AddPurchase.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddPurchase.storyboard; sourceTree = "<group>"; };
 		7B3E65CE2ACDA18F000CBBCA /* helpWidgetUIKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = helpWidgetUIKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B3E65D12ACDA18F000CBBCA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7B3E65D32ACDA18F000CBBCA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -94,6 +98,15 @@
 			path = ../../../../Downloads/creditcard;
 			sourceTree = "<group>";
 		};
+		7B3B30072AD2240800858817 /* AddPurchase */ = {
+			isa = PBXGroup;
+			children = (
+				7B3B30082AD2243800858817 /* AddPurchaseViewController.swift */,
+				7B3B300A2AD2244300858817 /* AddPurchase.storyboard */,
+			);
+			path = AddPurchase;
+			sourceTree = "<group>";
+		};
 		7B3E65C52ACDA18F000CBBCA = {
 			isa = PBXGroup;
 			children = (
@@ -124,6 +137,7 @@
 				7B3E65E52ACDA1DF000CBBCA /* CustomComponents */,
 				7BF933022AD04F5600641E1A /* MainBoard */,
 				7BFA856D2AD1E5FD00FE421B /* PurchaseList */,
+				7B3B30072AD2240800858817 /* AddPurchase */,
 			);
 			path = helpWidgetUIKit;
 			sourceTree = "<group>";
@@ -249,6 +263,7 @@
 				7BAA70FA2AD0B01600FD343A /* TitleSectionComponent.xib in Resources */,
 				7B2D8FEA2AD18B3200C9C50C /* nubank-2023-10.csv in Resources */,
 				7B2D8FE82AD18B3200C9C50C /* nubank-2023-06.csv in Resources */,
+				7B3B300B2AD2244300858817 /* AddPurchase.storyboard in Resources */,
 				7BEFF3A02ACE5D8D005D7FF0 /* TitleMonthComponent.xib in Resources */,
 				7B2D8FE72AD18B3200C9C50C /* nubank-2023-08.csv in Resources */,
 				7B2D8FE62AD18B3200C9C50C /* nubank-2023-09.csv in Resources */,
@@ -276,6 +291,7 @@
 				7BFA856F2AD1E66E00FE421B /* PurchaseItem.swift in Sources */,
 				7BFA491F2AD084AE0091C78C /* StructDashBoard.swift in Sources */,
 				7B3E65D42ACDA18F000CBBCA /* SceneDelegate.swift in Sources */,
+				7B3B30092AD2243800858817 /* AddPurchaseViewController.swift in Sources */,
 				7B780CBC2AD1BD0D00D28F5B /* Dashboard.swift in Sources */,
 				7B780CBA2AD1BCDB00D28F5B /* Month.swift in Sources */,
 			);

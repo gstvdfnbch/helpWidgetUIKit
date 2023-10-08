@@ -38,9 +38,11 @@ class CustomView: UIView {
 
         view.frame = self.bounds
 
-        view.layer.shadowOpacity = 0.3
+        view.layer.shadowOpacity = shadowOpacityProject
         view.layer.shadowRadius = shadowRadiusProject
-        view.layer.shadowColor = UIColor.black.cgColor
+        if let color = UIColor(named: "shadowColor")?.cgColor {
+            view.layer.shadowColor = color
+        }
         view.layer.shadowOffset = CGSize.zero
         
         

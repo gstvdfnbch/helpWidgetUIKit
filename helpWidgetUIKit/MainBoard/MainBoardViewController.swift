@@ -19,6 +19,18 @@ class MainBoardViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         
+        self.navigationController?.navigationBar.tintColor = .label
+        
+        self.navigationController?.navigationBar.layer.masksToBounds = false
+        if let color = UIColor(named: "shadowColor")?.cgColor {
+            self.navigationController?.navigationBar.layer.shadowColor = color
+        }
+        self.navigationController?.navigationBar.layer.shadowOpacity = 0.3
+        self.navigationController?.navigationBar.layer.shadowOffset = .zero
+        self.navigationController?.navigationBar.layer.shadowRadius = 3
+        
+        self.addNavigatorButtons()
+        
         purchaseManagerCenter.importFromCSV(filePath: Bundle.main.path(forResource: "nubank-2023-06", ofType: "csv") ?? "")
         //        purchaseManagerCenter.importFromCSV(filePath: Bundle.main.path(forResource: "nubank-2023-07", ofType: "csv") ?? "")
         //        purchaseManagerCenter.importFromCSV(filePath: Bundle.main.path(forResource: "nubank-2023-08", ofType: "csv") ?? "")
@@ -29,16 +41,32 @@ class MainBoardViewController: UIViewController {
         //purchaseManagerCenter.debugGSTV()
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        print("entrou SEGUE")
-        if segue.identifier == purchaseListSegue {
-            print("correta SEGUE")
+    func addNavigatorButtons() {
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(
+            image: UIImage(systemName: "plus.app"), style: .done, target: self, action: #selector(addPurchaseSegueFunc))
+        
+    }
+    
+    @objc func addPurchaseSegueFunc() {
+        self.performSegue(withIdentifier: addPurchaseSegue, sender: self)
 
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == purchaseListSegue {
             guard let destination = segue.destination as? PurchaseListViewController else { return }
             guard let senderList = sender as? [Purchase] else { return }
             
             destination.purchaseList = senderList
-         }
+        } else if segue.identifier == addPurchaseSegue {
+            print(addPurchaseSegue)
+//            guard let destination = segue.destination as? PurchaseListViewController else { return }
+//            guard let senderList = sender as? [Purchase] else { return }
+//            
+//            destination.purchaseList = senderList
+            
+        }
+        
     }
     
 }

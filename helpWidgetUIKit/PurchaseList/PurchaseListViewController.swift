@@ -28,7 +28,7 @@ class PurchaseListViewController: UIViewController {
 extension PurchaseListViewController: UITableViewDelegate{
     
 //    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//
+//        print(indexPath)
 //    }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -58,7 +58,7 @@ extension PurchaseListViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: PurchaseItem.identifier, for: indexPath) as! PurchaseItemCell
 
-        
+        print(tableView)
         //cell.purchaseItem.configureContent(date: Date(), category: "", value: 2.0)
         //cell.purchaseItem.dateText.text = "Day 1"
         //cell.purchaseItem.categoryBox.backgroundColor = UIColor.systemBlue

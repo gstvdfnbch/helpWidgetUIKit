@@ -34,7 +34,7 @@ class PurchaseItem: UIView {
 
         view.frame = self.bounds
 
-        //self.categoryBox.layer.cornerRadius = cornerRadiusProject - 8
+        self.categoryBox.layer.cornerRadius = 8
 
         self.addSubview(view)
     }
