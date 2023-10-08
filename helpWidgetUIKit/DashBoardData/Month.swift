@@ -14,7 +14,6 @@ struct Month {
     var purchases: [Purchase]
     var expensesPerDay: [String: Double]
     
-    
     mutating func updateAllValues(){
         
         if self.dashBoard.componentsListValues[DashboardItem.startBalance.rawValue].0 > 0 {
@@ -82,7 +81,6 @@ struct Month {
         let valueCalc = valueOf(dashItem: .startBalance, typeValue: .value) / Double(self.totalDaysInMonth())
         return valueCalc
     }
-    
     
     func averageSpent() -> Double{
         let valueCalc = self.totalExpenses() / Double(self.expensesPerDay.count)
@@ -154,5 +152,27 @@ struct Month {
         let days = totalDaysInMonth()
         
         return days == 0 ? 0 : totalExpenses() / Double(days)
+    }
+    
+    func monthString() -> String {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "MMMM"
+        
+        if let date = Calendar.current.date(from: DateComponents(year: year, month: monthInt, day: 1)) {
+            return formatter.string(from: date)
+        } else {
+            return "Mês inválido"
+        }
+    }
+    
+    func monthYearString() -> String {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "MMMM YYYY"
+        
+        if let date = Calendar.current.date(from: DateComponents(year: year, month: monthInt, day: 1)) {
+            return formatter.string(from: date)
+        } else {
+            return "Mês inválido"
+        }
     }
 }

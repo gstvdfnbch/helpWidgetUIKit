@@ -21,38 +21,34 @@
             <rect key="frame" x="0.0" y="0.0" width="393" height="85"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" alignment="center" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="ZaV-z6-elI">
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="ZaV-z6-elI">
                     <rect key="frame" x="16" y="8" width="361" height="61"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dia 01" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nXG-OV-gHF" userLabel="date">
-                            <rect key="frame" x="0.0" y="0.0" width="47" height="61"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                            <nil key="textColor"/>
+                            <rect key="frame" x="0.0" y="20.333333333333336" width="115.66666666666667" height="20.333333333333336"/>
+                            <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                            <color key="textColor" systemColor="secondaryLabelColor"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="xrX-Kq-cza">
-                            <rect key="frame" x="142.33333333333334" y="0.0" width="70" height="61"/>
+                            <rect key="frame" x="122.66666666666666" y="0.0" width="115.66666666666666" height="61"/>
                             <subviews>
                                 <view contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="dLv-BQ-1tD">
-                                    <rect key="frame" x="0.0" y="0.0" width="70" height="61"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="115.66666666666667" height="61"/>
                                     <color key="backgroundColor" systemColor="systemYellowColor"/>
                                     <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    <constraints>
-                                        <constraint firstAttribute="width" constant="70" id="OJ6-S0-uqe"/>
-                                    </constraints>
                                 </view>
                             </subviews>
                         </stackView>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="R$ 3.49" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HcR-yd-TAg" userLabel="value">
-                            <rect key="frame" x="301" y="20.333333333333336" width="60" height="20.333333333333336"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <rect key="frame" x="245.33333333333329" y="20.333333333333336" width="115.66666666666666" height="20.333333333333336"/>
+                            <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
                     </subviews>
                     <constraints>
-                        <constraint firstItem="xrX-Kq-cza" firstAttribute="top" secondItem="nXG-OV-gHF" secondAttribute="top" id="5MZ-LG-vO9"/>
-                        <constraint firstItem="xrX-Kq-cza" firstAttribute="bottom" secondItem="nXG-OV-gHF" secondAttribute="bottom" id="qfg-nN-Gag"/>
+                        <constraint firstItem="xrX-Kq-cza" firstAttribute="top" secondItem="ZaV-z6-elI" secondAttribute="top" id="xUu-W3-tbs"/>
                     </constraints>
                 </stackView>
             </subviews>
@@ -69,6 +65,9 @@
         </view>
     </objects>
     <resources>
+        <systemColor name="secondaryLabelColor">
+            <color red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemYellowColor">
             <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
