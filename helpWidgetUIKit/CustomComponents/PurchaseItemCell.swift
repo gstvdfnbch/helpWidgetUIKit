@@ -28,7 +28,7 @@ class PurchaseItemCell: UITableViewCell {
     func sendInfos(_ infos: Purchase) {
         self.purchaseItem.dateText.text = infos.dayString()
         self.purchaseItem.categoryBox.backgroundColor = UIColor(named: "backgroundComponents")
-        self.purchaseItem.valueText.text = "R$ " + infos.amount.formatToFixedDecimalPlaces(2)
+        self.purchaseItem.valueText.text = "R$ " + (-infos.amount).formatToFixedDecimalPlaces(2)
     }
 
 }

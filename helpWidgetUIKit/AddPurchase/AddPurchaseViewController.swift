@@ -37,6 +37,7 @@ class AddPurchaseViewController: UIViewController {
         }
         buttonSend.layer.shadowOffset = CGSize.zero
     }
+    
 
     func moveDigits(textValue: String) -> String {
         let valueString = textValue.split(separator: " ")

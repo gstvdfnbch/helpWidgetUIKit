@@ -51,7 +51,7 @@
                                         </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="CI0-Hv-9Bt">
-                                        <rect key="frame" x="0.0" y="104" width="345" height="152"/>
+                                        <rect key="frame" x="0.0" y="104" width="345" height="155"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="How much?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r3X-xF-OPQ">
                                                 <rect key="frame" x="0.0" y="0.0" width="345" height="40.666666666666664"/>
@@ -59,11 +59,11 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="pXt-E5-ptN">
-                                                <rect key="frame" x="0.0" y="48.66666666666665" width="345" height="65.333333333333314"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="pXt-E5-ptN">
+                                                <rect key="frame" x="0.0" y="48.66666666666665" width="345" height="68.333333333333314"/>
                                                 <subviews>
                                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="R$ 9.01" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="a53-tl-tHm" userLabel="TextField">
-                                                        <rect key="frame" x="0.0" y="0.0" width="345" height="64.333333333333329"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="345" height="67.333333333333329"/>
                                                         <color key="tintColor" name="fontColor"/>
                                                         <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
                                                         <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
@@ -72,7 +72,7 @@
                                                         </connections>
                                                     </textField>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZqN-Ta-H61">
-                                                        <rect key="frame" x="0.0" y="64.333333333333343" width="345" height="1"/>
+                                                        <rect key="frame" x="0.0" y="67.333333333333343" width="345" height="1"/>
                                                         <color key="backgroundColor" systemColor="quaternaryLabelColor"/>
                                                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
@@ -91,7 +91,7 @@
                                                 </constraints>
                                             </stackView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap to change the date" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8ph-nC-mqK">
-                                                <rect key="frame" x="0.0" y="122" width="345" height="30"/>
+                                                <rect key="frame" x="0.0" y="125" width="345" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="GVL-fh-2qq"/>
                                                 </constraints>
@@ -102,8 +102,11 @@
                                         </subviews>
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2dU-73-ae0">
-                                        <rect key="frame" x="0.0" y="320" width="345" height="73"/>
+                                        <rect key="frame" x="0.0" y="323" width="345" height="70"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="70" id="3jm-vV-BXh"/>
+                                        </constraints>
                                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Save">
