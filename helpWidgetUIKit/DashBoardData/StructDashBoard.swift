@@ -17,6 +17,8 @@ enum DashboardItem: Int {
     case averageSpent
     case today
     case yesterday
+    case previewMonth
+    case nextMonth
     case nonClick = 300
 }
 

@@ -23,8 +23,8 @@ class MainBoardViewController: UIViewController {
         
         self.addNavigatorButtons()
         
-        purchaseManagerCenter.importFromCSV(filePath: Bundle.main.path(forResource: "nubank-2023-06", ofType: "csv") ?? "")
-        //        purchaseManagerCenter.importFromCSV(filePath: Bundle.main.path(forResource: "nubank-2023-07", ofType: "csv") ?? "")
+        //purchaseManagerCenter.importFromCSV(filePath: Bundle.main.path(forResource: "nubank-2023-06", ofType: "csv") ?? "")
+                purchaseManagerCenter.importFromCSV(filePath: Bundle.main.path(forResource: "nubank-2023-07", ofType: "csv") ?? "")
         //        purchaseManagerCenter.importFromCSV(filePath: Bundle.main.path(forResource: "nubank-2023-08", ofType: "csv") ?? "")
         //        purchaseManagerCenter.importFromCSV(filePath: Bundle.main.path(forResource: "nubank-2023-09", ofType: "csv") ?? "")
         //        purchaseManagerCenter.importFromCSV(filePath: Bundle.main.path(forResource: "nubank-2023-10", ofType: "csv") ?? "")
@@ -86,6 +86,15 @@ extension MainBoardViewController: UITableViewDataSource {
             let cell = tableView.dequeueReusableCell(withIdentifier: TitleMonthComponentTableViewCell.identifier) as! TitleMonthComponentTableViewCell
             
             if let month = purchaseManagerCenter.months.last {
+//                let tapGestureLeft = UITapGestureRecognizer(target: self, action: #selector(handleComponentTap(_:)))
+//                let tapGestureRight = UITapGestureRecognizer(target: self, action: #selector(handleComponentTap(_:)))
+//                
+//                cell.titleMonthComponentView.chevronLeft.addGestureRecognizer(tapGestureLeft)
+//                cell.titleMonthComponentView.chevronLeft.tag = DashboardItem.previewMonth.rawValue
+//                
+//                cell.titleMonthComponentView.chevronRight.addGestureRecognizer(tapGestureRight)
+//                cell.titleMonthComponentView.chevronRight.tag = DashboardItem.nextMonth.rawValue
+                
                 cell.sendTextTitle(title: month.dashBoard.dashBoardList[section].title)
             }
             
@@ -112,8 +121,10 @@ extension MainBoardViewController: UITableViewDataSource {
             
             if let infoLeft = purchaseManagerCenter.months.last {
                 let info = infoLeft.dashBoard.infosDashBoard(index: infos[indexPath.row * 2].rawValue)
+                
                 cell.leftComponent.addGestureRecognizer(tapGestureLeft)
                 cell.leftComponent.tag = info.typeComp.rawValue
+                
                 cell.leftComponent.configureImageAndText(infos: info)
             }
             
@@ -123,6 +134,7 @@ extension MainBoardViewController: UITableViewDataSource {
                 
                 cell.rightComponent.addGestureRecognizer(tapGestureRight)
                 cell.rightComponent.tag = info.typeComp.rawValue
+                
                 cell.rightComponent.configureImageAndText(infos: info)
             }
             
@@ -158,6 +170,10 @@ extension MainBoardViewController: UITableViewDataSource {
                 print("Você selecionou Today")
             case .yesterday:
                 print("Você selecionou Yesterday")
+            case .previewMonth:
+                print("Você selecionou PreviewMont")
+            case .nextMonth:
+                print("Você selecionou NextMonth")
             case .nonClick:
                 print("Você selecionou Non-Click")
             default:

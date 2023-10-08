@@ -13,6 +13,9 @@ class TitleMonthComponent: UIView {
     @IBOutlet weak var titleMonth: UILabel!
     @IBOutlet weak var titlePeriod: UILabel!
     
+    @IBOutlet weak var chevronRight: UIImageView!
+    @IBOutlet weak var chevronLeft: UIImageView!
+    
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         initSubviews()
@@ -38,6 +41,8 @@ class TitleMonthComponent: UIView {
     func sendData(titleMnt: String, subtitleMnt: String) {
         titleMonth.text = titleMnt
         titlePeriod.text = subtitleMnt
+        
+        
     }
 
 }

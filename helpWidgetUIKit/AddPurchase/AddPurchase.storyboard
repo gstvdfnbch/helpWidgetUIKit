@@ -33,7 +33,7 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalCentering" translatesAutoresizingMaskIntoConstraints="NO" id="pXt-E5-ptN">
                                                 <rect key="frame" x="0.0" y="48.666666666666657" width="345" height="43.333333333333343"/>
                                                 <subviews>
-                                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="R$ 9.01" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="a53-tl-tHm" userLabel="TextField">
+                                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="R$ 0,00" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="a53-tl-tHm" userLabel="TextField">
                                                         <rect key="frame" x="0.0" y="0.0" width="345" height="42.333333333333336"/>
                                                         <color key="tintColor" name="fontColor"/>
                                                         <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
@@ -95,6 +95,7 @@
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="buttonTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="PET-DW-jTg"/>
+                                    <action selector="savePurchase:" destination="Y6W-OH-hqX" eventType="touchDown" id="k0E-KC-HLf"/>
                                 </connections>
                             </button>
                         </subviews>

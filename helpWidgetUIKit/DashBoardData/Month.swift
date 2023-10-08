@@ -16,6 +16,8 @@ struct Month {
     
     mutating func updateAllValues(){
         
+        self.dashBoard.dashBoardList[0].title = self.monthString()
+        
         if self.dashBoard.componentsListValues[DashboardItem.startBalance.rawValue].0 > 0 {
             let value = self.dashBoard.componentsListValues[DashboardItem.startBalance.rawValue].0 - self.dashBoard.componentsListValues[DashboardItem.spentSoFar.rawValue].0
             
