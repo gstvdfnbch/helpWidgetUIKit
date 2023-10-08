@@ -88,13 +88,26 @@ extension MainBoardViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let cell = tableView.dequeueReusableCell(withIdentifier: TitleSectionComponent.identifier) as! TitleSectionCell
         
-        if let month = purchaseManagerCenter.months.last {
-            cell.sendTextTitle(title: month.dashBoard.dashBoardList[section].title)
+        switch section {
+        case 0:
+            let cell = tableView.dequeueReusableCell(withIdentifier: TitleMonthComponentTableViewCell.identifier) as! TitleMonthComponentTableViewCell
+            
+            if let month = purchaseManagerCenter.months.last {
+                cell.sendTextTitle(title: month.dashBoard.dashBoardList[section].title)
+            }
+            
+            return cell
+        default:
+            let cell = tableView.dequeueReusableCell(withIdentifier: TitleSectionComponent.identifier) as! TitleSectionCell
+            
+            if let month = purchaseManagerCenter.months.last {
+                cell.sendTextTitle(title: month.dashBoard.dashBoardList[section].title)
+            }
+            
+            return cell
         }
         
-        return cell
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

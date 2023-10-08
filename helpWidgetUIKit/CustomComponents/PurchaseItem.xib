@@ -4,6 +4,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -22,26 +23,40 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="ZaV-z6-elI">
-                    <rect key="frame" x="16" y="8" width="361" height="61"/>
+                    <rect key="frame" x="32" y="8" width="329" height="69"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dia 01" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nXG-OV-gHF" userLabel="date">
-                            <rect key="frame" x="0.0" y="20.333333333333336" width="115.66666666666667" height="20.333333333333336"/>
+                            <rect key="frame" x="0.0" y="24.333333333333336" width="105" height="20.333333333333336"/>
                             <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                             <color key="textColor" systemColor="secondaryLabelColor"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="xrX-Kq-cza">
-                            <rect key="frame" x="122.66666666666666" y="0.0" width="115.66666666666666" height="61"/>
+                            <rect key="frame" x="112" y="0.0" width="105" height="69"/>
                             <subviews>
                                 <view contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="dLv-BQ-1tD">
-                                    <rect key="frame" x="0.0" y="0.0" width="115.66666666666667" height="61"/>
-                                    <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="105" height="69"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WyQ-Sf-22R">
+                                            <rect key="frame" x="8" y="0.0" width="89" height="69"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleCaption2"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" name="backgroundComponents"/>
                                     <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstItem="WyQ-Sf-22R" firstAttribute="leading" secondItem="dLv-BQ-1tD" secondAttribute="leading" constant="8" id="J5C-Wu-6Lh"/>
+                                        <constraint firstAttribute="bottom" secondItem="WyQ-Sf-22R" secondAttribute="bottom" id="QtI-UV-T3w"/>
+                                        <constraint firstAttribute="trailing" secondItem="WyQ-Sf-22R" secondAttribute="trailing" constant="8" id="Uv0-PL-f8e"/>
+                                        <constraint firstItem="WyQ-Sf-22R" firstAttribute="top" secondItem="dLv-BQ-1tD" secondAttribute="top" id="glF-kT-d64"/>
+                                    </constraints>
                                 </view>
                             </subviews>
                         </stackView>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="R$ 3.49" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HcR-yd-TAg" userLabel="value">
-                            <rect key="frame" x="245.33333333333329" y="20.333333333333336" width="115.66666666666666" height="20.333333333333336"/>
+                            <rect key="frame" x="224" y="24.333333333333336" width="105" height="20.333333333333336"/>
                             <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
@@ -55,9 +70,9 @@
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
-                <constraint firstItem="ZaV-z6-elI" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="89V-zU-YZZ"/>
-                <constraint firstAttribute="bottom" secondItem="ZaV-z6-elI" secondAttribute="bottom" constant="16" id="U9w-Vm-eaV"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="ZaV-z6-elI" secondAttribute="trailing" constant="16" id="d1Q-2K-9fc"/>
+                <constraint firstItem="ZaV-z6-elI" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="32" id="89V-zU-YZZ"/>
+                <constraint firstAttribute="bottom" secondItem="ZaV-z6-elI" secondAttribute="bottom" constant="8" id="U9w-Vm-eaV"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="ZaV-z6-elI" secondAttribute="trailing" constant="32" id="d1Q-2K-9fc"/>
                 <constraint firstItem="ZaV-z6-elI" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="8" id="jln-qy-Ipt"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
@@ -65,11 +80,11 @@
         </view>
     </objects>
     <resources>
+        <namedColor name="backgroundComponents">
+            <color red="0.97254902124404907" green="0.97254902124404907" blue="0.97254902124404907" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="secondaryLabelColor">
             <color red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemYellowColor">
-            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

@@ -27,6 +27,8 @@ struct Dashboard{
     ]
     
     let dashBoardList: [TableViewDashBoard] = [
+        TableViewDashBoard(title: "May 2023",
+                           itens: []),
         TableViewDashBoard(title: "General Infos",
                            itens: [
                             DashboardItem.startBalance,

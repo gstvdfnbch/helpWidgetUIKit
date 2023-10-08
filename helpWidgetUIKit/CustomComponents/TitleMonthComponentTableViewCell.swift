@@ -8,6 +8,7 @@
 import UIKit
 
 class TitleMonthComponentTableViewCell: UITableViewCell {
+    static let identifier = TitleMonthComponent.identifier
 
     @IBOutlet weak var titleMonthComponentView: TitleMonthComponent!
     
@@ -21,5 +22,8 @@ class TitleMonthComponentTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-
+    
+    func sendTextTitle(title: String) {
+        titleMonthComponentView.titleMonth.text = title
+    }
 }

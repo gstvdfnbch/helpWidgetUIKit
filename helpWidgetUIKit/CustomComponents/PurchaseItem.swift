@@ -34,15 +34,14 @@ class PurchaseItem: UIView {
 
         view.frame = self.bounds
 
-        self.categoryBox.layer.cornerRadius = 8
-        
-        self.categoryBox.layer.shadowOpacity = shadowOpacityProject
-        self.categoryBox.layer.shadowRadius = shadowRadiusProject
-        if let color = UIColor(named: "shadowColor")?.cgColor {
-            self.categoryBox.layer.shadowColor = color
-        }
-        self.categoryBox.layer.shadowOffset = CGSize.zero
-        
+//        self.categoryBox.layer.cornerRadius = 8
+//        self.categoryBox.layer.shadowOpacity = shadowOpacityProject
+//        self.categoryBox.layer.shadowRadius = shadowRadiusProject
+//        if let color = UIColor(named: "shadowColor")?.cgColor {
+//            self.categoryBox.layer.shadowColor = color
+//        }
+//        self.categoryBox.layer.shadowOffset = CGSize.zero
+        self.categoryBox.isHidden = true
         
         self.addSubview(view)
     }
@@ -52,9 +51,8 @@ class PurchaseItem: UIView {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "dd-MM-yyyy"
         
-        dateText.text = dateFormatter.string(from: date)
-        categoryBox.backgroundColor = UIColor(named: "backgroundComponents")
-        valueText.text = value.formatToFixedDecimalPlaces(2)
+        self.dateText.text = dateFormatter.string(from: date)
+        self.valueText.text = value.formatToFixedDecimalPlaces(2)
         
     }
       
