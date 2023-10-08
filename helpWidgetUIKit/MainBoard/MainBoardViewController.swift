@@ -21,14 +21,6 @@ class MainBoardViewController: UIViewController {
         
         self.navigationController?.navigationBar.tintColor = .label
         
-        self.navigationController?.navigationBar.layer.masksToBounds = false
-        if let color = UIColor(named: "shadowColor")?.cgColor {
-            self.navigationController?.navigationBar.layer.shadowColor = color
-        }
-        self.navigationController?.navigationBar.layer.shadowOpacity = 0.3
-        self.navigationController?.navigationBar.layer.shadowOffset = .zero
-        self.navigationController?.navigationBar.layer.shadowRadius = 3
-        
         self.addNavigatorButtons()
         
         purchaseManagerCenter.importFromCSV(filePath: Bundle.main.path(forResource: "nubank-2023-06", ofType: "csv") ?? "")

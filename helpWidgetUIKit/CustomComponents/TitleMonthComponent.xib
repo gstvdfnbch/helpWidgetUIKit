@@ -21,14 +21,14 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="VIi-EW-2Kl">
-                    <rect key="frame" x="64" y="0.0" width="279" height="71"/>
+                    <rect key="frame" x="64" y="16" width="279" height="55"/>
                     <subviews>
                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="252" verticalHuggingPriority="251" image="chevron.left" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="F87-7w-0KF">
-                            <rect key="frame" x="0.0" y="27.333333333333332" width="20" height="16.666666666666654"/>
+                            <rect key="frame" x="0.0" y="19.333333333333336" width="20" height="16.666666666666664"/>
                             <color key="tintColor" systemColor="secondaryLabelColor"/>
                         </imageView>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="9c1-xo-Fhj">
-                            <rect key="frame" x="20" y="9.6666666666666679" width="239" height="51.666666666666657"/>
+                            <rect key="frame" x="20" y="1.6666666666666679" width="239" height="51.666666666666657"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="October" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L9B-JL-r6P">
                                     <rect key="frame" x="0.0" y="0.0" width="239" height="33.666666666666664"/>
@@ -45,7 +45,7 @@
                             </subviews>
                         </stackView>
                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chevron.right" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Zbb-Lg-F7j">
-                            <rect key="frame" x="259" y="27.333333333333332" width="20" height="16.666666666666654"/>
+                            <rect key="frame" x="259" y="19.333333333333336" width="20" height="16.666666666666664"/>
                             <color key="tintColor" systemColor="secondaryLabelColor"/>
                         </imageView>
                     </subviews>
@@ -57,7 +57,7 @@
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="VIi-EW-2Kl" secondAttribute="bottom" id="ZTb-Dc-18H"/>
                 <constraint firstItem="VIi-EW-2Kl" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="64" id="brJ-tg-x9a"/>
                 <constraint firstAttribute="trailing" secondItem="VIi-EW-2Kl" secondAttribute="trailing" constant="64" id="kwU-6C-f0o"/>
-                <constraint firstItem="VIi-EW-2Kl" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="xPo-SB-geR"/>
+                <constraint firstItem="VIi-EW-2Kl" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="16" id="xPo-SB-geR"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <point key="canvasLocation" x="60.305343511450381" y="-243.3098591549296"/>
@@ -67,7 +67,7 @@
         <image name="chevron.left" catalog="system" width="97" height="128"/>
         <image name="chevron.right" catalog="system" width="97" height="128"/>
         <systemColor name="secondaryLabelColor">
-            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
