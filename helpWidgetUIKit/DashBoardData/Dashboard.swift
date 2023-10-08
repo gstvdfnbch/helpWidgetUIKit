@@ -16,11 +16,11 @@ struct Dashboard{
     var componentsList: [InfosDashBoard] = [
         InfosDashBoard(title: "Start Balance", typeComp: DashboardItem.startBalance, iconImage: "start", valueDouble: 0.0),
         InfosDashBoard(title: "Actual Balance", typeComp: DashboardItem.actualBalance, iconImage: "wallet", valueDouble: 0.0),
-        InfosDashBoard(title: "Average\nGoal", typeComp: DashboardItem.averageGoal, iconImage: "target", valueDouble: 0.0, subtitleString: "This is THE right way! :)"),
+        InfosDashBoard(title: "Average\nGoal", typeComp: DashboardItem.averageGoal, iconImage: "target", valueDouble: 0.0, unit: " / day", subtitleString: "This is THE right way! :)"),
         InfosDashBoard(title: "Spent\nSo Far", typeComp: DashboardItem.spentSoFar, iconImage: "expenses", valueDouble: 0.0, subtitleString: "Remeber to save money."),
         
-        InfosDashBoard(title: "Average\nSpent", typeComp: DashboardItem.averageSpent, modeIcon: ModeIcon.percentInv, valueDouble: 0.0, percentValue: 0.0, unit: "/ day", subtitleString: "Average daily spending you have done so far."),
-        InfosDashBoard(title: "Average \nLeft Over", typeComp: DashboardItem.averageLeftOver, modeIcon: ModeIcon.percent, valueDouble: 0.0, percentValue: 0.0, unit: "/ day", subtitleString: "Average daily spending limit, but you won't."),
+        InfosDashBoard(title: "Average\nSpent", typeComp: DashboardItem.averageSpent, modeIcon: ModeIcon.percentInv, valueDouble: 0.0, percentValue: 0.0, unit: " / day", subtitleString: "Average daily spending you have done so far."),
+        InfosDashBoard(title: "Average \nLeft Over", typeComp: DashboardItem.averageLeftOver, modeIcon: ModeIcon.percent, valueDouble: 0.0, percentValue: 0.0, unit: " / day", subtitleString: "Average daily spending limit, but you won't."),
         
         InfosDashBoard(title: "Today", typeComp: DashboardItem.today, modeIcon: ModeIcon.percentInv, valueDouble: 0.0, percentValue: 0.0, subtitleString: "How much you spent today."),
         InfosDashBoard(title: "Yesterday", typeComp: DashboardItem.yesterday, modeIcon: ModeIcon.percentInv, valueDouble: 0.0, percentValue: 0.0, subtitleString: "How much you spent yesterday.")

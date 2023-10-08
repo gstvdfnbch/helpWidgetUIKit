@@ -18,7 +18,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="UcE-QL-20V">
+                            <tableView contentMode="scaleAspectFit" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="UcE-QL-20V">
                                 <rect key="frame" x="0.0" y="103" width="393" height="715"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -48,22 +48,22 @@
                                             <outlet property="titleMonthComponentView" destination="s9c-zg-jVS" id="Pux-lB-HNw"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="DoubleColumn" id="lzb-Fo-GxW" userLabel="DoubleColumn" customClass="DoubleColumn" customModule="helpWidgetUIKit" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="54" width="393" height="189.33332824707031"/>
+                                    <tableViewCell contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="DoubleColumn" id="lzb-Fo-GxW" userLabel="DoubleColumn" customClass="DoubleColumn" customModule="helpWidgetUIKit" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="54" width="393" height="200"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="lzb-Fo-GxW" id="cX1-Hk-l2r" userLabel="componentsDashboard">
-                                            <rect key="frame" x="0.0" y="0.0" width="393" height="189.33332824707031"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="200"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="92s-4C-Uuw">
-                                                    <rect key="frame" x="16" y="8" width="361" height="173.33333333333334"/>
+                                                    <rect key="frame" x="16" y="8" width="361" height="184"/>
                                                     <subviews>
                                                         <view contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="Qtk-On-vu1" userLabel="Left" customClass="CustomView" customModule="helpWidgetUIKit" customModuleProvider="target">
-                                                            <rect key="frame" x="0.0" y="22.666666666666671" width="172.33333333333334" height="128"/>
+                                                            <rect key="frame" x="0.0" y="67" width="172.33333333333334" height="50"/>
                                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </view>
                                                         <view contentMode="scaleAspectFit" id="72L-Br-Sku" userLabel="Right" customClass="CustomView" customModule="helpWidgetUIKit" customModuleProvider="target">
-                                                            <rect key="frame" x="188.66666666666663" y="86.666666666666671" width="172.33333333333337" height="0.0"/>
+                                                            <rect key="frame" x="188.66666666666663" y="92" width="172.33333333333337" height="0.0"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </view>
@@ -86,7 +86,7 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="TitleSectionComponent" id="xN9-Je-yen" customClass="TitleSectionCell" customModule="helpWidgetUIKit" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="243.33332824707031" width="393" height="44"/>
+                                        <rect key="frame" x="0.0" y="254" width="393" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="xN9-Je-yen" id="xBh-b7-4Gp" userLabel="TitleView">
                                             <rect key="frame" x="0.0" y="0.0" width="393" height="44"/>
