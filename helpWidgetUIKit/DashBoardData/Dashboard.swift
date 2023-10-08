@@ -26,8 +26,8 @@ struct Dashboard{
         InfosDashBoard(title: "Yesterday", typeComp: DashboardItem.yesterday, modeIcon: ModeIcon.percentInv, valueDouble: 0.0, percentValue: 0.0, subtitleString: "How much you spent yesterday.")
     ]
     
-    let dashBoardList: [TableViewDashBoard] = [
-        TableViewDashBoard(title: "May 2023",
+    var dashBoardList: [TableViewDashBoard] = [
+        TableViewDashBoard(title: "October",
                            itens: []),
         TableViewDashBoard(title: "General Infos",
                            itens: [

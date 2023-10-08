@@ -57,18 +57,34 @@ class AddPurchaseViewController: UIViewController {
     
     
     func moveDigits(textValue: String) -> String {
+        let decimalDivider = ","
+        let milDivider = "."
+        let spacer = " "
         
-        let valueDouble = extractAndConvertToDouble(textValue)
         
-        let secondValue = String(valueDouble).split(separator: ".")[1].count > 2 ? true : false
+        var finalString: String = textValue
         
-        if secondValue {
-            let finalValue = valueDouble * 10
-            return ("R$ " + finalValue.formatToFixedDecimalPlaces(2))
-        } else {
-            let finalValue = valueDouble / 10
-            return ("R$ " + finalValue.formatToFixedDecimalPlaces(2))
+        let textValueCopy = textValue
+        
+        let stringValue = textValueCopy.split(separator: spacer)[1]
+        
+        let stringRemoveDot = stringValue.replacingOccurrences(of: milDivider, with: "")
+        
+        let stringValueDouble = stringRemoveDot.replacingOccurrences(of: decimalDivider, with: milDivider)
+        
+        if let doubleValue = Double(stringValueDouble) {
+                        
+            let numberDecimal = String(doubleValue).split(separator: milDivider)[1].count
+            
+            if numberDecimal > 2 {
+                finalString = "R$ " + Double(doubleValue * 10).formatToFixedDecimalPlaces(2)
+            } else {
+                finalString = "R$ " + Double(doubleValue / 10).formatToFixedDecimalPlaces(2)
+            }
         }
+        
+        return finalString
+            
         
     }
     
@@ -77,10 +93,8 @@ class AddPurchaseViewController: UIViewController {
         
         textFieldValue.text = moveDigits(textValue: textValue)
     }
-    
-    @IBAction func buttonTapped(_ sender: Any) {
-        if let text = textFieldValue.text {
-            print(text)
-        }
+
+    @IBAction func savePurchase(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
     }
 }
