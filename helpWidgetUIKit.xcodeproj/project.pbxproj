@@ -24,6 +24,10 @@
 		7B780CB82AD1B89200D28F5B /* ExtentionDoubleFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B780CB72AD1B89200D28F5B /* ExtentionDoubleFormat.swift */; };
 		7B780CBA2AD1BCDB00D28F5B /* Month.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B780CB92AD1BCDB00D28F5B /* Month.swift */; };
 		7B780CBC2AD1BD0D00D28F5B /* Dashboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B780CBB2AD1BD0D00D28F5B /* Dashboard.swift */; };
+		7B7941042AD2F43F00E510F8 /* TitleMonthComponentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B7941032AD2F43F00E510F8 /* TitleMonthComponentTableViewCell.swift */; };
+		7B7941062AD2F46900E510F8 /* DoubleColumnTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B7941052AD2F46900E510F8 /* DoubleColumnTableViewCell.swift */; };
+		7B7941082AD2F49A00E510F8 /* TitleSectionComponenteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B7941072AD2F49A00E510F8 /* TitleSectionComponenteTableViewCell.swift */; };
+		7B79410C2AD302EE00E510F8 /* TitleSectionPurchaseListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B79410B2AD302EE00E510F8 /* TitleSectionPurchaseListTableViewCell.swift */; };
 		7BAA70F82AD0AFCE00FD343A /* TitleSectionComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BAA70F72AD0AFCE00FD343A /* TitleSectionComponent.swift */; };
 		7BAA70FA2AD0B01600FD343A /* TitleSectionComponent.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7BAA70F92AD0B01600FD343A /* TitleSectionComponent.xib */; };
 		7BEFF39C2ACE5CA4005D7FF0 /* ConstantsProject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BEFF39B2ACE5CA4005D7FF0 /* ConstantsProject.swift */; };
@@ -31,7 +35,7 @@
 		7BEFF3A02ACE5D8D005D7FF0 /* TitleMonthComponent.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7BEFF39F2ACE5D8D005D7FF0 /* TitleMonthComponent.xib */; };
 		7BF932FD2AD03DD600641E1A /* MainBoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BF932FC2AD03DD600641E1A /* MainBoardViewController.swift */; };
 		7BF933012AD03E1400641E1A /* MainBoard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7BF933002AD03E1400641E1A /* MainBoard.storyboard */; };
-		7BFA491C2AD07E9E0091C78C /* CustomTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BFA491B2AD07E9E0091C78C /* CustomTableView.swift */; };
+		7BFA491C2AD07E9E0091C78C /* PurchaseItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BFA491B2AD07E9E0091C78C /* PurchaseItemCell.swift */; };
 		7BFA491F2AD084AE0091C78C /* StructDashBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BFA491E2AD084AE0091C78C /* StructDashBoard.swift */; };
 		7BFA856F2AD1E66E00FE421B /* PurchaseItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BFA856E2AD1E66E00FE421B /* PurchaseItem.swift */; };
 		7BFA85712AD1E69100FE421B /* PurchaseItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7BFA85702AD1E69100FE421B /* PurchaseItem.xib */; };
@@ -59,6 +63,10 @@
 		7B780CB72AD1B89200D28F5B /* ExtentionDoubleFormat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtentionDoubleFormat.swift; sourceTree = "<group>"; };
 		7B780CB92AD1BCDB00D28F5B /* Month.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Month.swift; sourceTree = "<group>"; };
 		7B780CBB2AD1BD0D00D28F5B /* Dashboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dashboard.swift; sourceTree = "<group>"; };
+		7B7941032AD2F43F00E510F8 /* TitleMonthComponentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleMonthComponentTableViewCell.swift; sourceTree = "<group>"; };
+		7B7941052AD2F46900E510F8 /* DoubleColumnTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleColumnTableViewCell.swift; sourceTree = "<group>"; };
+		7B7941072AD2F49A00E510F8 /* TitleSectionComponenteTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleSectionComponenteTableViewCell.swift; sourceTree = "<group>"; };
+		7B79410B2AD302EE00E510F8 /* TitleSectionPurchaseListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleSectionPurchaseListTableViewCell.swift; sourceTree = "<group>"; };
 		7BAA70F72AD0AFCE00FD343A /* TitleSectionComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleSectionComponent.swift; sourceTree = "<group>"; };
 		7BAA70F92AD0B01600FD343A /* TitleSectionComponent.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TitleSectionComponent.xib; sourceTree = "<group>"; };
 		7BEFF39B2ACE5CA4005D7FF0 /* ConstantsProject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstantsProject.swift; sourceTree = "<group>"; };
@@ -66,7 +74,7 @@
 		7BEFF39F2ACE5D8D005D7FF0 /* TitleMonthComponent.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TitleMonthComponent.xib; sourceTree = "<group>"; };
 		7BF932FC2AD03DD600641E1A /* MainBoardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainBoardViewController.swift; sourceTree = "<group>"; };
 		7BF933002AD03E1400641E1A /* MainBoard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainBoard.storyboard; sourceTree = "<group>"; };
-		7BFA491B2AD07E9E0091C78C /* CustomTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableView.swift; sourceTree = "<group>"; };
+		7BFA491B2AD07E9E0091C78C /* PurchaseItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseItemCell.swift; sourceTree = "<group>"; };
 		7BFA491E2AD084AE0091C78C /* StructDashBoard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StructDashBoard.swift; sourceTree = "<group>"; };
 		7BFA856E2AD1E66E00FE421B /* PurchaseItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseItem.swift; sourceTree = "<group>"; };
 		7BFA85702AD1E69100FE421B /* PurchaseItem.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PurchaseItem.xib; sourceTree = "<group>"; };
@@ -145,15 +153,19 @@
 		7B3E65E52ACDA1DF000CBBCA /* CustomComponents */ = {
 			isa = PBXGroup;
 			children = (
-				7BFA491B2AD07E9E0091C78C /* CustomTableView.swift */,
 				7BAA70F92AD0B01600FD343A /* TitleSectionComponent.xib */,
 				7BAA70F72AD0AFCE00FD343A /* TitleSectionComponent.swift */,
+				7B7941072AD2F49A00E510F8 /* TitleSectionComponenteTableViewCell.swift */,
+				7B79410B2AD302EE00E510F8 /* TitleSectionPurchaseListTableViewCell.swift */,
 				7B3E65E82ACDA257000CBBCA /* CustomView.xib */,
 				7B3E65E62ACDA222000CBBCA /* CustomView.swift */,
+				7B7941052AD2F46900E510F8 /* DoubleColumnTableViewCell.swift */,
 				7BEFF39F2ACE5D8D005D7FF0 /* TitleMonthComponent.xib */,
 				7BEFF39D2ACE5D7C005D7FF0 /* TitleMonthComponent.swift */,
+				7B7941032AD2F43F00E510F8 /* TitleMonthComponentTableViewCell.swift */,
 				7BFA85702AD1E69100FE421B /* PurchaseItem.xib */,
 				7BFA856E2AD1E66E00FE421B /* PurchaseItem.swift */,
+				7BFA491B2AD07E9E0091C78C /* PurchaseItemCell.swift */,
 			);
 			path = CustomComponents;
 			sourceTree = "<group>";
@@ -280,6 +292,7 @@
 			files = (
 				7B3E65E72ACDA222000CBBCA /* CustomView.swift in Sources */,
 				7BAA70F82AD0AFCE00FD343A /* TitleSectionComponent.swift in Sources */,
+				7B7941062AD2F46900E510F8 /* DoubleColumnTableViewCell.swift in Sources */,
 				7BEFF39E2ACE5D7C005D7FF0 /* TitleMonthComponent.swift in Sources */,
 				7B780CB82AD1B89200D28F5B /* ExtentionDoubleFormat.swift in Sources */,
 				7BEFF39C2ACE5CA4005D7FF0 /* ConstantsProject.swift in Sources */,
@@ -287,9 +300,12 @@
 				7BF932FD2AD03DD600641E1A /* MainBoardViewController.swift in Sources */,
 				7B2D8FDF2AD1888800C9C50C /* PurchaseManager.swift in Sources */,
 				7B3E65D22ACDA18F000CBBCA /* AppDelegate.swift in Sources */,
-				7BFA491C2AD07E9E0091C78C /* CustomTableView.swift in Sources */,
+				7B7941082AD2F49A00E510F8 /* TitleSectionComponenteTableViewCell.swift in Sources */,
+				7BFA491C2AD07E9E0091C78C /* PurchaseItemCell.swift in Sources */,
+				7B7941042AD2F43F00E510F8 /* TitleMonthComponentTableViewCell.swift in Sources */,
 				7BFA856F2AD1E66E00FE421B /* PurchaseItem.swift in Sources */,
 				7BFA491F2AD084AE0091C78C /* StructDashBoard.swift in Sources */,
+				7B79410C2AD302EE00E510F8 /* TitleSectionPurchaseListTableViewCell.swift in Sources */,
 				7B3E65D42ACDA18F000CBBCA /* SceneDelegate.swift in Sources */,
 				7B3B30092AD2243800858817 /* AddPurchaseViewController.swift in Sources */,
 				7B780CBC2AD1BD0D00D28F5B /* Dashboard.swift in Sources */,

@@ -31,12 +31,9 @@ class TitleSectionComponent: UIView {
 
         view.frame = self.bounds
         
+        self.titleText.font = UIFont.boldSystemFont(ofSize: titleText.font.pointSize)
+
         self.addSubview(view)
-    }
-    
-    func configureImageAndText(infos: InfosDashBoard) {
-        titleText.text = infos.title
-        titleText.font = UIFont.boldSystemFont(ofSize: titleText.font.pointSize)
     }
 
 

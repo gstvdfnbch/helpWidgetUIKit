@@ -6,6 +6,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -17,58 +18,59 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="singleLineEtched" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="IlX-7l-hfJ">
+                            <tableView clipsSubviews="YES" contentMode="scaleAspectFit" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="singleLineEtched" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="IlX-7l-hfJ">
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="TitleSectionComponent" id="5q2-zV-anO" userLabel="TitleSectionCell" customClass="PurchaseItemCell" customModule="helpWidgetUIKit" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="50" width="393" height="43.666667938232422"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="5q2-zV-anO" id="rFh-h1-V3z" userLabel="TitleSectionCell">
-                                            <rect key="frame" x="0.0" y="0.0" width="393" height="43.666667938232422"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NVR-q6-VPc" customClass="TitleSectionComponent" customModule="helpWidgetUIKit" customModuleProvider="target">
-                                                    <rect key="frame" x="0.0" y="0.0" width="393" height="43.666666666666664"/>
-                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                </view>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstAttribute="trailing" secondItem="NVR-q6-VPc" secondAttribute="trailing" id="6Ew-W8-vxE"/>
-                                                <constraint firstItem="NVR-q6-VPc" firstAttribute="leading" secondItem="rFh-h1-V3z" secondAttribute="leading" id="L9s-DO-KYO"/>
-                                                <constraint firstAttribute="bottom" secondItem="NVR-q6-VPc" secondAttribute="bottom" id="Ojd-6N-ht6"/>
-                                                <constraint firstItem="NVR-q6-VPc" firstAttribute="top" secondItem="rFh-h1-V3z" secondAttribute="top" id="QkV-7y-Xtu"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <connections>
-                                            <outlet property="purchaseItem" destination="rFh-h1-V3z" id="W6T-ZA-rCD"/>
-                                        </connections>
-                                    </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="PurchaseItem" id="5o9-RE-12E" userLabel="PurchaseItemCell" customClass="PurchaseItemCell" customModule="helpWidgetUIKit" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="93.666667938232422" width="393" height="43.666667938232422"/>
+                                        <rect key="frame" x="0.0" y="55.333332061767578" width="393" height="16.333333969116211"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="5o9-RE-12E" id="Fak-il-aaZ" userLabel="PurchaseItemCell">
-                                            <rect key="frame" x="0.0" y="0.0" width="393" height="43.666667938232422"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="16.333333969116211"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Wj-qN-4cm" customClass="PurchaseItem" customModule="helpWidgetUIKit" customModuleProvider="target">
-                                                    <rect key="frame" x="0.0" y="0.0" width="393" height="43.666666666666664"/>
+                                                    <rect key="frame" x="0.0" y="7.9999999999999991" width="393" height="0.33333333333333304"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </view>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
-                                                <constraint firstItem="4Wj-qN-4cm" firstAttribute="top" secondItem="Fak-il-aaZ" secondAttribute="top" id="Alm-Px-NNb"/>
-                                                <constraint firstAttribute="bottom" secondItem="4Wj-qN-4cm" secondAttribute="bottom" id="GTy-K0-s87"/>
+                                                <constraint firstItem="4Wj-qN-4cm" firstAttribute="top" secondItem="Fak-il-aaZ" secondAttribute="top" constant="8" id="Alm-Px-NNb"/>
+                                                <constraint firstAttribute="bottom" secondItem="4Wj-qN-4cm" secondAttribute="bottom" constant="8" id="GTy-K0-s87"/>
                                                 <constraint firstAttribute="trailing" secondItem="4Wj-qN-4cm" secondAttribute="trailing" id="PVx-bW-065"/>
                                                 <constraint firstItem="4Wj-qN-4cm" firstAttribute="leading" secondItem="Fak-il-aaZ" secondAttribute="leading" id="gkc-2e-kxM"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <connections>
-                                            <outlet property="purchaseItem" destination="Fak-il-aaZ" id="MZR-Sj-LOL"/>
+                                            <outlet property="purchaseItem" destination="4Wj-qN-4cm" id="6jn-TY-YZ0"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="TitleSectionComponent" rowHeight="70" id="yt3-65-pSi" userLabel="TitleSectionCell" customClass="TitleSectionPurchaseListTableViewCell" customModule="helpWidgetUIKit" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="71.666666030883789" width="393" height="70"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="yt3-65-pSi" id="nLh-az-W4O" userLabel="TitleSectionComponent">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="70"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0nf-TJ-mA7" customClass="TitleSectionComponent" customModule="helpWidgetUIKit" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="16" width="393" height="46"/>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                </view>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstItem="0nf-TJ-mA7" firstAttribute="leading" secondItem="nLh-az-W4O" secondAttribute="leading" id="IjB-n9-zuX"/>
+                                                <constraint firstAttribute="bottom" secondItem="0nf-TJ-mA7" secondAttribute="bottom" constant="8" id="LtW-Nt-gjp"/>
+                                                <constraint firstItem="0nf-TJ-mA7" firstAttribute="top" secondItem="nLh-az-W4O" secondAttribute="top" constant="16" id="a6e-OI-bWA"/>
+                                                <constraint firstAttribute="trailing" secondItem="0nf-TJ-mA7" secondAttribute="trailing" id="oa5-dc-np1"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <outlet property="titleMain" destination="0nf-TJ-mA7" id="p6b-DJ-ZXQ"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -96,5 +98,8 @@
         <namedColor name="backgroundApp">
             <color red="0.92941176891326904" green="0.92941176891326904" blue="0.92941176891326904" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>

@@ -7,12 +7,16 @@
 
 import UIKit
 
+struct TableViewPurchaseList {
+    var title: String
+    var purchaseList: [Purchase]
+}
 
 class PurchaseListViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
-    var purchaseList: [Purchase] = []
+    var purchaseList: TableViewPurchaseList = TableViewPurchaseList(title: "",purchaseList: [])
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,12 +28,11 @@ class PurchaseListViewController: UIViewController {
 
 }
 
-
 extension PurchaseListViewController: UITableViewDelegate{
     
-//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        print(indexPath)
-//    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print(indexPath)
+    }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return UITableView.automaticDimension
@@ -40,7 +43,7 @@ extension PurchaseListViewController: UITableViewDelegate{
 extension PurchaseListViewController: UITableViewDataSource {
     
    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-       return 5//purchaseList.count
+       return purchaseList.purchaseList.count
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -48,22 +51,18 @@ extension PurchaseListViewController: UITableViewDataSource {
     }
 
     
-//    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-//        let cell = tableView.dequeueReusableCell(withIdentifier: TitleSectionComponent.identifier) as! TitleSectionCell
-//        
-//        
-//        return cell
-//    }
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let cell = tableView.dequeueReusableCell(withIdentifier: TitleSectionCell.identifier) as! TitleSectionPurchaseListTableViewCell
+        
+        cell.titleMain.titleText.text = purchaseList.title
+
+        return cell
+    }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: PurchaseItem.identifier, for: indexPath) as! PurchaseItemCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: PurchaseItemCell.identifier, for: indexPath) as! PurchaseItemCell
 
-        print(tableView)
-        //cell.purchaseItem.configureContent(date: Date(), category: "", value: 2.0)
-        //cell.purchaseItem.dateText.text = "Day 1"
-        //cell.purchaseItem.categoryBox.backgroundColor = UIColor.systemBlue
-        //cell.purchaseItem.valueText.text = "R$ 6.66"
-        
+        cell.sendInfos(purchaseList.purchaseList[purchaseList.purchaseList.count - (indexPath.row + 1)])
         
         return cell
     }

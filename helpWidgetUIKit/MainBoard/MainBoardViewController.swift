@@ -44,7 +44,6 @@ class MainBoardViewController: UIViewController {
     func addNavigatorButtons() {
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(
             image: UIImage(systemName: "plus.app"), style: .done, target: self, action: #selector(addPurchaseSegueFunc))
-        
     }
     
     @objc func addPurchaseSegueFunc() {
@@ -55,7 +54,7 @@ class MainBoardViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == purchaseListSegue {
             guard let destination = segue.destination as? PurchaseListViewController else { return }
-            guard let senderList = sender as? [Purchase] else { return }
+            guard let senderList = sender as? TableViewPurchaseList else { return }
             
             destination.purchaseList = senderList
         } else if segue.identifier == addPurchaseSegue {
@@ -91,8 +90,9 @@ extension MainBoardViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let cell = tableView.dequeueReusableCell(withIdentifier: TitleSectionComponent.identifier) as! TitleSectionCell
         
-        
-        cell.titleSection.configureImageAndText(infos: InfosDashBoard(title: purchaseManagerCenter.months.last?.dashBoard.dashBoardList[section].title ?? "",typeComp: DashboardItem.nonClick, valueDouble: 0))
+        if let month = purchaseManagerCenter.months.last {
+            cell.sendTextTitle(title: month.dashBoard.dashBoardList[section].title)
+        }
         
         return cell
     }
@@ -140,7 +140,11 @@ extension MainBoardViewController: UITableViewDataSource {
                 print("Você selecionou Average Goal")
             case .spentSoFar:
                 print("Você selecionou Spent So Far")
-                performSegue(withIdentifier: purchaseListSegue, sender: purchaseManagerCenter.months.last?.purchases ?? [])
+                if let listSender = purchaseManagerCenter.months.last {
+                    performSegue(withIdentifier: purchaseListSegue, 
+                                 sender: TableViewPurchaseList( title: listSender.monthYearString(),
+                                                                purchaseList: listSender.purchases ))
+                }
             case .averageLeftOver:
                 print("Você selecionou Average Left Over")
             case .averageSpent:

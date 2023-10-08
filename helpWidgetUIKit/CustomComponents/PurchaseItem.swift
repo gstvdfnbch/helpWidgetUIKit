@@ -35,7 +35,15 @@ class PurchaseItem: UIView {
         view.frame = self.bounds
 
         self.categoryBox.layer.cornerRadius = 8
-
+        
+        self.categoryBox.layer.shadowOpacity = shadowOpacityProject
+        self.categoryBox.layer.shadowRadius = shadowRadiusProject
+        if let color = UIColor(named: "shadowColor")?.cgColor {
+            self.categoryBox.layer.shadowColor = color
+        }
+        self.categoryBox.layer.shadowOffset = CGSize.zero
+        
+        
         self.addSubview(view)
     }
     
@@ -45,7 +53,7 @@ class PurchaseItem: UIView {
         dateFormatter.dateFormat = "dd-MM-yyyy"
         
         dateText.text = dateFormatter.string(from: date)
-        categoryBox.backgroundColor = UIColor.systemGreen
+        categoryBox.backgroundColor = UIColor(named: "backgroundComponents")
         valueText.text = value.formatToFixedDecimalPlaces(2)
         
     }

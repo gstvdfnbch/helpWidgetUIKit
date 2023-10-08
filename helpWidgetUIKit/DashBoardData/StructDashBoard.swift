@@ -57,6 +57,13 @@ struct Purchase {
     let category: String
     let title: String
     let amount: Double
+    
+    func dayString() -> String {
+           let dateFormatter = DateFormatter()
+           dateFormatter.dateFormat = "MM/dd"
+           return dateFormatter.string(from: date)
+    }
+    
 }
 
 
