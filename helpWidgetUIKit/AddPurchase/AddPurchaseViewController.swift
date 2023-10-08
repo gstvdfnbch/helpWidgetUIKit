@@ -30,12 +30,6 @@ class AddPurchaseViewController: UIViewController {
         
         buttonSend.isEnabled = true
         buttonSend.clipsToBounds = false
-        buttonSend.layer.shadowOpacity = shadowOpacityProject
-        buttonSend.layer.shadowRadius = shadowRadiusProject
-        if let color = UIColor(named: "shadowColor")?.cgColor {
-            buttonSend.layer.shadowColor = color
-        }
-        buttonSend.layer.shadowOffset = CGSize.zero
     }
     
 
