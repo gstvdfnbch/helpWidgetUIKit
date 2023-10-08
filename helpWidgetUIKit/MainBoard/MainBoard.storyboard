@@ -18,13 +18,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="UcE-QL-20V">
+                            <tableView contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="UcE-QL-20V">
                                 <rect key="frame" x="0.0" y="103" width="393" height="715"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="TitleMonthComponent" id="uN4-MJ-b5I" customClass="TitleMonthComponentTableViewCell" customModule="helpWidgetUIKit" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="50" width="393" height="16"/>
+                                        <rect key="frame" x="0.0" y="38" width="393" height="16"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="uN4-MJ-b5I" id="1kB-hr-lhd" userLabel="titleXib">
                                             <rect key="frame" x="0.0" y="0.0" width="393" height="16"/>
@@ -49,7 +49,7 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="DoubleColumn" id="lzb-Fo-GxW" userLabel="DoubleColumn" customClass="DoubleColumn" customModule="helpWidgetUIKit" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="66" width="393" height="189.33332824707031"/>
+                                        <rect key="frame" x="0.0" y="54" width="393" height="189.33332824707031"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="lzb-Fo-GxW" id="cX1-Hk-l2r" userLabel="componentsDashboard">
                                             <rect key="frame" x="0.0" y="0.0" width="393" height="189.33332824707031"/>
@@ -85,8 +85,8 @@
                                             <outlet property="rightComponent" destination="72L-Br-Sku" id="3fJ-t4-6nU"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="TitleSectionComponent" id="xN9-Je-yen" customClass="TitleSectionCell" customModule="helpWidgetUIKit" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="255.33332824707031" width="393" height="44"/>
+                                    <tableViewCell contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="TitleSectionComponent" id="xN9-Je-yen" customClass="TitleSectionCell" customModule="helpWidgetUIKit" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="243.33332824707031" width="393" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="xN9-Je-yen" id="xBh-b7-4Gp" userLabel="TitleView">
                                             <rect key="frame" x="0.0" y="0.0" width="393" height="44"/>
@@ -125,11 +125,33 @@
                     <navigationItem key="navigationItem" title="MoneyControll" id="gTf-W0-Egt"/>
                     <connections>
                         <outlet property="tableView" destination="UcE-QL-20V" id="48X-R4-HUo"/>
+                        <segue destination="FK5-3u-JT0" kind="presentation" identifier="PurchaseListSegue" id="vV4-CZ-RGV"/>
+                        <segue destination="PQH-X2-SQb" kind="presentation" identifier="AddPurchaseSegue" id="dyg-5N-hjx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="831.29770992366412" y="10.563380281690142"/>
+        </scene>
+        <!--PurchaseList-->
+        <scene sceneID="g5C-Vk-Xfx">
+            <objects>
+                <viewControllerPlaceholder storyboardName="PurchaseList" id="FK5-3u-JT0" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="xg0-BN-PLe"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hXV-1z-ZlP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1558" y="-109"/>
+        </scene>
+        <!--AddPurchase-->
+        <scene sceneID="Ep9-ij-JnB">
+            <objects>
+                <viewControllerPlaceholder storyboardName="AddPurchase" id="PQH-X2-SQb" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="J8l-Es-3Cj"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Eqd-9E-dH3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1556" y="110"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="aub-Ie-8PR">
@@ -167,7 +189,7 @@
     </scenes>
     <resources>
         <namedColor name="backgroundApp">
-            <color red="0.86666667461395264" green="0.86666667461395264" blue="0.86666667461395264" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.92941176891326904" green="0.92941176891326904" blue="0.92941176891326904" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="backgroundComponents">
             <color red="0.97254902124404907" green="0.97254902124404907" blue="0.97254902124404907" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

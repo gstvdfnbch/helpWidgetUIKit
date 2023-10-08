@@ -10,6 +10,7 @@ import UIKit
 
 let cornerRadiusProject: CGFloat = 21.0
 let shadowRadiusProject: CGFloat = 3.0
+let shadowOpacityProject: Float = 0.3
 
 
 enum ModeIcon {
@@ -17,3 +18,7 @@ enum ModeIcon {
     case percent
     case percentInv
 }
+
+
+let purchaseListSegue: String = "PurchaseListSegue"
+let addPurchaseSegue: String = "AddPurchaseSegue"

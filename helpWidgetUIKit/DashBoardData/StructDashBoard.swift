@@ -7,7 +7,6 @@
 
 import UIKit
 
-let dashboarCount: Int = 8
 
 enum DashboardItem: Int {
     case startBalance = 0
@@ -18,6 +17,7 @@ enum DashboardItem: Int {
     case averageSpent
     case today
     case yesterday
+    case nonClick = 300
 }
 
 enum TypeValue: Int {
@@ -25,19 +25,39 @@ enum TypeValue: Int {
     case percent = 1
 }
 
+enum CSVColumns: Int {
+    case date = 0
+    case category
+    case title
+    case amount
+}
+
+
+
 struct InfosDashBoard {
     var title: String
+    var typeComp: DashboardItem 
     var iconImage: String? = nil
     var modeIcon: ModeIcon? = nil
     var valueDouble: Double
     var percentValue: Double? = nil
     var unit: String? = nil
     var subtitleString: String? = nil
+    
 }
-
 
 struct TableViewDashBoard {
     var title: String
     var subtitle: String? = nil
     var itens: [DashboardItem] = []
 }
+
+struct Purchase {
+    let date: Date
+    let category: String
+    let title: String
+    let amount: Double
+}
+
+
+
