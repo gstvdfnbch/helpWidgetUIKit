@@ -38,12 +38,12 @@ class CustomView: UIView {
 
         view.frame = self.bounds
 
-        view.layer.shadowOpacity = shadowOpacityProject
-        view.layer.shadowRadius = shadowRadiusProject
-        if let color = UIColor(named: "shadowColor")?.cgColor {
-            view.layer.shadowColor = color
-        }
-        view.layer.shadowOffset = CGSize.zero
+//        view.layer.shadowOpacity = shadowOpacityProject
+//        view.layer.shadowRadius = shadowRadiusProject
+//        if let color = UIColor(named: "shadowColor")?.cgColor {
+//            view.layer.shadowColor = color
+//        }
+//        view.layer.shadowOffset = CGSize.zero
         
         
         self.addSubview(view)

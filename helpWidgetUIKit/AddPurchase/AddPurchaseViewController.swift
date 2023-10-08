@@ -19,7 +19,7 @@ class AddPurchaseViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         self.sheetPresentationController?.preferredCornerRadius = cornerRadiusProject
         
         
@@ -30,23 +30,46 @@ class AddPurchaseViewController: UIViewController {
         
         buttonSend.isEnabled = true
         buttonSend.clipsToBounds = false
-        buttonSend.layer.shadowOpacity = shadowOpacityProject
-        buttonSend.layer.shadowRadius = shadowRadiusProject
-        if let color = UIColor(named: "shadowColor")?.cgColor {
-            buttonSend.layer.shadowColor = color
-        }
-        buttonSend.layer.shadowOffset = CGSize.zero
     }
     
-
+    func extractAndConvertToDouble(_ inputString: String) -> Double {
+        // Separa a string por "," e junta as string
+        let cleanedString = inputString.components(separatedBy: ",").joined()
+        
+        // remove o "R$ ", separando por " "
+        let components = cleanedString.components(separatedBy: " ")
+        
+        // se o componets.count for menor que 1 significa que a string inicial foi escrita errada.
+        guard components.count > 1 else {
+            return 0
+        }
+        
+        // pega a componente 1 pq é o valor, a componente 0 é "R$"
+        let secondValueString = components[1]
+        
+        // Remova a vírgula e converta o valor em Double
+        if let secondValue = Double(secondValueString) {
+            return secondValue
+        } else {
+            return 0
+        }
+    }
+    
+    
     func moveDigits(textValue: String) -> String {
-        let valueString = textValue.split(separator: " ")
-        if let value = Double(valueString[1]) {
-            let finalValue = value * 10
+        
+        let valueDouble = extractAndConvertToDouble(textValue)
+        
+        let secondValue = String(valueDouble).split(separator: ".")[1].count > 2 ? true : false
+        
+        if secondValue {
+            let finalValue = valueDouble * 10
             return ("R$ " + finalValue.formatToFixedDecimalPlaces(2))
         } else {
-            return textValue
+            let finalValue = valueDouble / 10
+            return ("R$ " + finalValue.formatToFixedDecimalPlaces(2))
         }
+        
     }
     
     @IBAction func changeValue(_ sender: Any) {
@@ -55,11 +78,9 @@ class AddPurchaseViewController: UIViewController {
         textFieldValue.text = moveDigits(textValue: textValue)
     }
     
-
-    
     @IBAction func buttonTapped(_ sender: Any) {
         if let text = textFieldValue.text {
-           print(text)
+            print(text)
         }
     }
 }
